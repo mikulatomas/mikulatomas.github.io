@@ -38,7 +38,7 @@ Cílem předmětu je seznámit studenty s programováním v jazyce Python, kter�
 
 Na každém semináři bude zadáno několik úkolů. Úkoly je nutné odevzdat vždy do dalšího semináře. Pokud bude řešení nevyhovující, termín splnění se posune o další týden. Pokud ani do té doby student neodevzdá správné řešení tak úkol nebude uznán. Za celý předmět je možné nesplnit až 6 úkolů.
 
-<img src="/assets/images/JP/schema.png" srcset="/assets/images/JP/schema@2x.png 2x" />
+<img src="/assets/images/JP/schema.png" style="width:100%" srcset="/assets/images/JP/schema@2x.png 2x" />
 
 **Co vše je na úkolu hodnoceno?**
 1. Splnění zadání.
