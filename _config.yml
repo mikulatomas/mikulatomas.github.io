@@ -11,7 +11,7 @@ office-hours: 10:00-11:30 Wednesday
 
 
 types: [course, summer, winter]
-courses: [PDS, PAPR1]
+courses: [PDS, PAPR1, JP]
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
