@@ -19,6 +19,14 @@ pre {
     border-radius: 10px;
 }
 
+.pep {
+    .rouge-table {
+        // border-width: 2px;
+        border-color: #FFC795;
+        // border-style: solid;
+    }
+}
+
 figure {
     -webkit-box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.26);
     -moz-box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.26);
