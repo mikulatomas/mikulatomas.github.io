@@ -40,6 +40,13 @@ Na každém semináři bude zadáno několik úkolů. Úkoly je nutné odevzdat 
 
 <img src="/assets/images/JP/schema.png" srcset="/assets/images/JP/schema@2x.png 2x" />
 
+**Co vše je na úkolu hodnoceno?**
+1. Splnění zadání.
+2. Kvalita a přehlednost zdrojového kódu.
+3. Dodržovaní style guide [PEP8](https://pep8.org) (bude postupně představováno na seminářích).
+
+**Přehled uznaných úkolů** je dostupný [zde](/).
+
 #### Závěrečný projekt
 Na závěr předmětu je nutné vypracovat závěrečný projekt, detailní informace budou dodány během semestru.
 
