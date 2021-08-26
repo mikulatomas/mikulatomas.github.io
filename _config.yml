@@ -28,5 +28,5 @@ sass:
 #   - Gemfile
 #   - Gemfile.lock
 
-- name: Jekyll Actions
-  uses: helaili/jekyll-action@2.1.0
+name: Jekyll Actions
+uses: helaili/jekyll-action@2.1.0
