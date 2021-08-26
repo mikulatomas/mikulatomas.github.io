@@ -24,9 +24,9 @@ kramdown:
 sass:
   style: compressed
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
 
 - name: Jekyll Actions
   uses: helaili/jekyll-action@2.1.0
