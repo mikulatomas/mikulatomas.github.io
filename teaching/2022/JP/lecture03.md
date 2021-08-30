@@ -346,7 +346,7 @@ import my_math # lokální modul
 {% endhighlight %}
 </div>
 
-Existuje varianta `import` výrazu, který přímo importuje jména z jmenného prostoru modulu do aktuálního jmenného prostoru.
+Existuje varianta `import` příkazu, který přímo importuje jména z jmenného prostoru modulu do aktuálního jmenného prostoru.
 
 {% highlight python linenos %}
 from list_operations import subtract_lists, sum_lists

@@ -404,7 +404,7 @@ while True:
     user_input = input("Input:")
 
     if user_input == 'stop':
-        # výraz break přeruší nadřazený cyklus, rovněž existuje continue
+        # příkaz break přeruší nadřazený cyklus, rovněž existuje continue
         break
     else:
         print(user_input)

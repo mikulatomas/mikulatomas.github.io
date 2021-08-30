@@ -385,7 +385,7 @@ user_integer = int(input("Please enter an integer: "))
 
 division_remainder = user_integer % 2
 
-# výraz if pro větvení programu, pozor na dělení kódu do bloků pomocí mezer/tabulatoru, časté chyby
+# příkaz větvení if pro větvení programu, pozor na dělení kódu do bloků pomocí mezer/tabulatoru, časté chyby
 if not division_remainder:
     print(x, "is divisible by 2")
 {% endhighlight %}
