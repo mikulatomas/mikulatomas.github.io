@@ -4,7 +4,7 @@
 1. Vytvoření účtu na [https://github.com/](https://github.com/).
 2. Stažení a instalace Github Desktop [https://desktop.github.com](https://desktop.github.com).
 
-V tomto návodu popíšeme splnění a odevzdání prvního úkolu **L01E01**: Hello world z prvního semináře.
+V tomto návodu popíšeme splnění a odevzdání prvního úkolu **L01E01**: Hello world z prvního semináře. Github Classroom používájí git. Pro odevzdávání úkolů není jeho znalost potřebná (používají se pouze dvě základní funkce). Zájemci si mohou o základech gitu přečíst například [zde](https://git-scm.com/doc).
 
 ## 1. Přijetí úkolu
 Práce na úkolu začíná jeho přijetím, každý úkol má na webu semináře odkaz "Přijmout úkol".
