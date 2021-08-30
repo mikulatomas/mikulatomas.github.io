@@ -1,4 +1,4 @@
-## Github Classroom
+## Jak pracovat s Github Classroom?
 
 **Co je potřeba a nebude pokryto zde:**
 1. Vytvoření účtu na [https://github.com/](https://github.com/).

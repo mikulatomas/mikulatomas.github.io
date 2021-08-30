@@ -34,7 +34,7 @@ Cílem předmětu je seznámit studenty s programováním v jazyce Python, kter�
 ### Splnění předmětu
 
 #### Průběžné úkoly
-Úkoly budou zadávány na platformě [Gihub Classroom](https://classroom.github.com/). Pro plnění úkolů je nutné vytvořit bezplatný účet na [Github.com](https://github.com) a nainstalovat klienta [GitHub Desktop](https://desktop.github.com). Demonstrace systému proběhne na prvním semináři.
+Úkoly budou zadávány na platformě [Gihub Classroom](https://classroom.github.com/). Pro plnění úkolů je nutné vytvořit bezplatný účet na [Github.com](https://github.com) a nainstalovat klienta [GitHub Desktop](https://desktop.github.com). Demonstrace systému proběhne na prvním semináři ([Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)).
 
 Na každém semináři bude zadáno několik úkolů. Úkoly je nutné odevzdat vždy do dalšího semináře. Pokud bude řešení nevyhovující, termín splnění se posune o další týden. Pokud ani do té doby student neodevzdá správné řešení tak úkol nebude uznán. Za celý předmět je možné nesplnit až 6 úkolů.
 
@@ -51,6 +51,7 @@ Na každém semináři bude zadáno několik úkolů. Úkoly je nutné odevzdat 
 Na závěr předmětu je nutné vypracovat závěrečný projekt, detailní informace budou dodány během semestru.
 
 ### Užitečné odkazy
+* [Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)
 * [Dokumentace jazyka Python3](https://docs.python.org/3/)
 * [Real Python](https://realpython.com)
 
