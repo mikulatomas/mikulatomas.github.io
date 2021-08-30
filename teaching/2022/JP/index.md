@@ -12,6 +12,7 @@ year: 2022
 Cílem předmětu je seznámit studenty s programováním v jazyce Python, který patří mezi nejpopulárnější programovací jazyky současnosti. Předpokládá se pokročilejší znalost procedurálního programování (znalost jazyka Python není vyžadována) a algoritmizace. Při výuce je kladen důraz na efektivní a praktické použití jazyka Python. 
 
 ### Seznam seminářů
+Obsah následujících stránek je pouze doprovodný materiál, nenahrazuje účast na semináři.
 <ul>
 {% capture type %}{{ page.course }}{% endcapture %}
 {% for lecture_page in site.pages %}
@@ -45,7 +46,7 @@ Na každém semináři bude zadáno několik úkolů. Úkoly je nutné odevzdat 
 2. Kvalita a přehlednost zdrojového kódu.
 3. Dodržovaní style guide [PEP8](https://pep8.org) (bude postupně představováno na seminářích).
 
-**Přehled uznaných úkolů** je dostupný [zde](/).
+**Přehled uznaných úkolů** je dostupný [<strike>zde</strike>](/).
 
 #### Závěrečný projekt
 Na závěr předmětu je nutné vypracovat závěrečný projekt, detailní informace budou dodány během semestru.
