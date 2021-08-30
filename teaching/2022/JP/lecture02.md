@@ -410,7 +410,7 @@ while True:
         print(user_input)
 {% endhighlight %}
 
-## Výraz if v kontextu sekvencí
+## Příkaz if v kontextu sekvencí
 Více informací [zde](https://docs.python.org/3/tutorial/controlflow.html#if-statements).
 
 {% highlight python linenos %}

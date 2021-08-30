@@ -120,9 +120,9 @@ change_name(names)
 print(names)
 {% endhighlight %}
 
-### Výraz `return` podrobněji
+### Příkaz `return` podrobněji
 
-Výraz `return` okamžitě ukončí veškeré vykonávání funkce (včetně cyklů) a vrátí uvedenou hodnotu.
+Příkaz `return` okamžitě ukončí veškeré vykonávání funkce (včetně cyklů) a vrátí uvedenou hodnotu.
 
 {% highlight python linenos %}
 def member(target, iterable):
@@ -150,7 +150,7 @@ def nothing():
 nothing() is None
 {% endhighlight %}
 
-Výraz `return` můžeme v kombinaci se sekvencí `tuple` použít na vrácení několika hodnot.
+Příkaz `return` můžeme v kombinaci se sekvencí `tuple` použít na vrácení několika hodnot.
 
 {% highlight python linenos %}
 def multiply_point(point, by):
@@ -253,9 +253,9 @@ help(subtract)
 
 Od této chvíle **bude vyžadována dokumentace ve formě docstringů u všech funkcí, které se v domácích úkolech vyskytnou**.
 
-## Výraz `assert`
+## Příkaz `assert`
 
-Výraz `assert` je vhodným nástrojem defenzivního programování, umožňuje nám za běhu programu zaručit, že jsou uvedené výrazy platné.
+Příkaz `assert` je vhodným nástrojem defenzivního programování, umožňuje nám za běhu programu zaručit, že jsou uvedené výrazy platné.
 
 {% highlight python linenos %}
 a = 10
