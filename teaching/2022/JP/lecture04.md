@@ -1,4 +1,4 @@
-​​---
+---
 layout: default
 courses: JP
 title: 4. Výjimky a dekorátory (WIP)
@@ -11,7 +11,6 @@ year: 2022
 Více informací [zde](https://docs.python.org/3/tutorial/errors.html).
 
 Během našeho programování jsme se již setkali s několika výjimkami (exceptions). Jednu ukázkovou můžeme vyvolat následovně:
-
 
 {% highlight bash linenos %}
 Python 3.9.4 (default, Apr  5 2021, 01:50:46) 
