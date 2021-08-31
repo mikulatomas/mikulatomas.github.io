@@ -1,7 +1,7 @@
 ---
 layout: default
 courses: JP
-title: 3. Funkce a moduly
+title: 3. Funkce a moduly (WIP)
 year: 2022
 ---
 

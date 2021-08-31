@@ -1,7 +1,7 @@
 ---
 layout: default
 courses: JP
-title: 2. Sekvence a cykly
+title: 2. Sekvence a cykly (WIP)
 year: 2022
 ---
 
