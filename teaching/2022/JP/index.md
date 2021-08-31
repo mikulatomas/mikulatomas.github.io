@@ -41,6 +41,10 @@ Na každém semináři bude zadáno několik úkolů. Úkoly je nutné odevzdat 
 
 <img src="/assets/images/JP/schema.png" style="width:100%" srcset="/assets/images/JP/schema@2x.png 2x" />
 
+**Kdy dostanu zpětnou vazbu?**
+
+Před obdržením zpětné vazby je nutné splnit veškeré automatizované testy na platformě [Gihub Classroom](https://classroom.github.com/). Více informací lze přečíst [zde](/teaching/2022/JP/classroom). Veškeré úkoly, které prošly automatickým testováním se pokusím opravit během prvního týdne od zadání (zelený obdélník na obrázku). Pokud by došlo ke zdržení, deadline na finální odevzdání (červený obdélník na obrázku) bude prodloužen.
+
 **Co vše je na úkolu hodnoceno?**
 1. Splnění zadání.
 2. Kvalita a přehlednost zdrojového kódu.
