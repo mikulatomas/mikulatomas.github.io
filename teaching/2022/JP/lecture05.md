@@ -514,15 +514,6 @@ Dunder metody představují elegantní řešení pro implementaci podpory vestav
 
 Protipříkladem je pomyslná třída `Vector` ve které chceme implementovat výpočet délky vektoru. Pozor, použití `len()` na instanci třídy `Vector` není vhodné, funkci `len()` používáme v kontextu kolekcí pro zjištění počtu prvků. U třídy `Vector` požadujeme jinou sémantiku. V takovém případě je tedy vhodnější zvolit implementaci metody `Vector.length()`, rovněž jsem se setkal s implementace dunder metody `__abs__()` a následné používání funkce `abs()`.
 
-
-<!-- ## Úkoly
-Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
-
-* **L01E01**: Hello world [[Náhled](https://github.com/kmi-jp/template-L01E01)], [[Příjmout úkol](https://classroom.github.com/a/BLVFlAR8)]
-* **L01E02**: Integer input [[Náhled](https://github.com/kmi-jp/template-L01E02)], [[Příjmout úkol]()]
-* **L01E03**: Point input [[Náhled](https://github.com/kmi-jp/template-L01E03)], [[Příjmout úkol]()]
-* **L01E04PEP**: PEP8 format [[Náhled](https://github.com/kmi-jp/template-L01E04PEP)], [[Příjmout úkol]()] -->
-
 ## Dědičnost
 Koncept dědičnosti je jeden z hlavních konceptů objektově orientovaného programování. Ve zkratce si nyní ukážeme, jak může jedna třída dědit funkcionalitu od jiné.
 
@@ -938,3 +929,11 @@ assert owner.name == owner[0]
 # nelze, je to tuple
 owner.name = "Pepa Novak"
 {% endhighlight %}
+
+<!-- ## Úkoly
+Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
+
+* **L01E01**: Hello world [[Náhled](https://github.com/kmi-jp/template-L01E01)], [[Příjmout úkol](https://classroom.github.com/a/BLVFlAR8)]
+* **L01E02**: Integer input [[Náhled](https://github.com/kmi-jp/template-L01E02)], [[Příjmout úkol]()]
+* **L01E03**: Point input [[Náhled](https://github.com/kmi-jp/template-L01E03)], [[Příjmout úkol]()]
+* **L01E04PEP**: PEP8 format [[Náhled](https://github.com/kmi-jp/template-L01E04PEP)], [[Příjmout úkol]()] -->
