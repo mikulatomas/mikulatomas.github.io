@@ -14,6 +14,7 @@ year: 2022
 **Stránky předmětu:** [{{ page.course_page }}]({{ page.course_page }})
 
 ### Seznam cvičení
+* **Cvičení dne 22.9.2021** (první cvičení) **odpadá!**
 <ul>
 {% capture type %}{{ page.course }}{% endcapture %}
 {% for lecture_page in site.pages %}
@@ -26,7 +27,7 @@ year: 2022
 </ul>
 
 ### Co bude obsahem cvičení PDS
-Bude doplněno.
+Praktická implementace vybraných problémů v jazyce Python 3.
 
 ### Zápočet
-Bude doplněno.
+Vypracování zadaných úkolů, podrobnosti budou doplněny během semestru.
