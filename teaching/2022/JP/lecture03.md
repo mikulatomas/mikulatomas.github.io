@@ -178,6 +178,9 @@ multiply_point(point, 2)
 # správně, dojde k unpackingu pomocí operátoru *
 multiply_point(*point, 2)
 
+# příklad z praxe, transformace matice
+zip(*[[1, 2, 3], [4, 5, 6]])
+
 # slovník lze použít pro pojmenované argumenty
 point = {"x": 10, "y": 5}
 
