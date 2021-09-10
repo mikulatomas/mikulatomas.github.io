@@ -50,6 +50,10 @@ Před obdržením zpětné vazby je nutné splnit veškeré automatizované test
 2. Kvalita a přehlednost zdrojového kódu.
 3. Dodržovaní style guide [PEP8](https://pep8.org) (bude postupně představováno na seminářích).
 
+**Plagiátorství**
+
+Veškeré odevzdané zdrojové kódy jsou automaticky testované na plagiátorství systémem [Moss](https://theory.stanford.edu/~aiken/moss/). Při prokázaném plagiátorství ztrácí oba studenti/studentky nárok na získání zápočtu a situaci dále řeší vedoucí katedry.
+
 **Přehled uznaných úkolů** je dostupný [<strike>zde</strike>](/).
 
 #### Závěrečný projekt
