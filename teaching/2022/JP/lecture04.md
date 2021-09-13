@@ -404,9 +404,7 @@ waste_some_time(100)
 <!-- ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
 
-* **L01E01**: Hello world [[Náhled](https://github.com/kmi-jp/template-L01E01)], [[Příjmout úkol](https://classroom.github.com/a/BLVFlAR8)]
-* **L01E02**: Integer input [[Náhled](https://github.com/kmi-jp/template-L01E02)], [[Příjmout úkol]()]
-* **L01E03**: Point input [[Náhled](https://github.com/kmi-jp/template-L01E03)], [[Příjmout úkol]()]
-* **L01E04PEP**: PEP8 format [[Náhled](https://github.com/kmi-jp/template-L01E04PEP)], [[Příjmout úkol]()] -->
-
-
+* **L04E01**: Matrix multiplication (exceptions) [[Náhled](https://github.com/kmi-jp/template-L04E01)], [[Příjmout úkol](https://classroom.github.com/a/gvhkVSSa)]
+* **L04E02**: Matrix multiplication (exceptions) [[Náhled](https://github.com/kmi-jp/template-L04E02)], [[Příjmout úkol](https://classroom.github.com/a/hjR-sWmn)]
+* **L04E03**: Matrix multiplication (exceptions) [[Náhled](https://github.com/kmi-jp/template-L04E03)], [[Příjmout úkol](https://classroom.github.com/a/RCYZ_nDg)]
+-->
