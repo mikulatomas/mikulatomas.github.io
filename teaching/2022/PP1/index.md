@@ -17,4 +17,4 @@ year: 2022
 Stránka s obrázky vytvořených za pomoci želvý grafiky v jazyku Lisp je dostupná [zde](/teaching/showcase).
 
 ## Zápočet
-Bude doplněno.
+Aktivní účast na cvičení (absence max 25%)
