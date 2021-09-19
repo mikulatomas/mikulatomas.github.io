@@ -18,7 +18,7 @@ Obsah následujících stránek je pouze doprovodný materiál, nenahrazuje úč
 {% for lecture_page in site.pages %}
 {% if lecture_page.courses contains type and lecture_page.year == page.year %}
 <li>
-<a href="{{lecture_page.url}}"><strike>{{lecture_page.title}}</strike></a>
+<a href="{{lecture_page.url}}">{{lecture_page.title}}</a>
 </li>
 {% endif %}
 {% endfor %}
