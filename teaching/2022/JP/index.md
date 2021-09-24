@@ -54,7 +54,7 @@ Před obdržením zpětné vazby je nutné splnit veškeré automatizované test
 
 Veškeré odevzdané zdrojové kódy jsou automaticky testované na plagiátorství systémem [Moss](https://theory.stanford.edu/~aiken/moss/). Při prokázaném plagiátorství ztrácí oba studenti/studentky nárok na získání zápočtu a situaci dále řeší vedoucí katedry.
 
-**Přehled uznaných úkolů** je dostupný [<strike>zde</strike>](/).
+**Přehled uznaných úkolů** je dostupný [zde](https://docs.google.com/spreadsheets/d/1rZd0ZoGgrTo0mTOgyKq3NEuUA9DbEpZfUpugs4dGEDU/edit?usp=sharing).
 
 #### Závěrečný projekt
 Na závěr předmětu je nutné vypracovat závěrečný projekt, detailní informace budou dodány během semestru.
