@@ -340,7 +340,6 @@ __rpow__
 Je běžné, ne však nutné, aby výsledná metoda vracela `self`.
 
 {% highlight python linenos %}
-__add__ # chování +
 __iadd__ # chování +=
 __isub__ # chování -=
 __imul__ # chování *=
@@ -410,7 +409,6 @@ credit_account_1 += credit_account_2
 #### Bitové operátory
 
 {% highlight python linenos %}
-__add__ # chování +
 __invert__ # chování ~
 __lshift__ # chování <<
 __rshift__ # chování >>
@@ -424,7 +422,6 @@ __xor__ # chování ^
 Důležité, dostaneme se k nim později.
 
 {% highlight python linenos %}
-__add__ # chování převodu na integer například při slicingu
 __index__ # chování převodu na integer například při slicingu
 __len__ # chování len()
 __getitem__ # chování x[20]
