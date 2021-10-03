@@ -85,22 +85,4 @@ assert counter == 20
 
 {% include task.html content="Naprogramujte úlohu sdíleného čítače a vyzkoušejte zda opravdu nefunguje." %}
 
-{% include task.html content="Mějme tři setřízená pole <code>a</code>, <code>b</code>, <code>c</code> s celými čísly. Je známo, že některé číslo se vyskytuje v každém poli. Paralelně nalézněte nejmenší index <code>i</code>, <code>j</code>, <code>k</code> pro které platí <code>a[i] == b[j] == c[k]</code>, hodnoty vypište na obrazovku. Úkol lze vyřešit tak, že není nutné použít synchronizaci.</p>
-<p>
-<strong>Ukázkový vstup problému</strong>
-</p>
-<p>
-<code>
-a = [3,4,5,6,7]<br/>
-b = [1,2,5,7,9]<br/>
-c = [3,4,6,7,9]<br/>
-</code>
-<p>
-<strong>Ukázkový výstup</strong>
-</p>
-<p>
-<code>
-Thread 1 result: 7<br/>
-Thread 2 result: 7<br/>
-Thread 3 result: 7<br/>
-</code></p>"%}
+{% include task.html content="Naprogramujte úlohu sdíleného čítače, kde je možné specifikovat počet vláken inkrementující sdílený čítač." %}
