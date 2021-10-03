@@ -60,7 +60,26 @@ print(text)
 {% endhighlight %}
 
 ### Problém sdíleného čítače
-Mějme dvě vlákna, která inkrementují sdílený čítač. Každé vlákno má čítač postupně zvýšovat o 100 000. Očekávaná výsledná hodnota je 200 000, proč tomu tak ne vždy je?
+Mějme dvě vlákna, která inkrementují sdílený čítač. Každé vlákno má čítač postupně zvýšovat o 10. Očekávaná výsledná hodnota je 20.
+
+Aby bylo možné jednoduše pozorovat problém, provádějte změnu čítače následujícím způsobem:
+
+{% highlight python linenos %}
+import time
+
+# ...
+local_counter = counter
+time.sleep(0.0001)
+local_counter += 1
+time.sleep(0.0001)
+counter = local_counter
+# ...
+{% endhighlight %}
+
+Správnost čítače lze testovat pomoci <code>assert</code>.
+{% highlight python linenos %}
+assert counter == 20
+{% endhighlight %}
 
 {% include task.html content="Vytvořte dvě vlákna, která se uspí (<a href='https://realpython.com/python-sleep/'>jak uspat Python</a>) na náhodně dlouhou dobu (v rozsahu několika sekund) a vypíší výstup na obrazovku." %}
 
