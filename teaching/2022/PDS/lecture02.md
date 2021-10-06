@@ -85,4 +85,4 @@ assert counter == 20
 
 {% include task.html content="Naprogramujte úlohu sdíleného čítače a vyzkoušejte zda opravdu nefunguje." %}
 
-{% include task.html content="Naprogramujte úlohu sdíleného čítače, kde je možné specifikovat počet vláken inkrementující sdílený čítač." %}
+{% include task.html content="Naprogramujte úlohu sdíleného čítače, kde je možné specifikovat počet vláken inkrementující sdílený čítač (<a href="https://classroom.github.com/a/ms-b8OBg">Příjmout úkol</a>)." %}
