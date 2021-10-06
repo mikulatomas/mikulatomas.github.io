@@ -60,7 +60,7 @@ print(text)
 {% endhighlight %}
 
 ### Problém sdíleného čítače
-Mějme dvě vlákna, která inkrementují sdílený čítač. Každé vlákno má čítač postupně zvýšovat o 10. Očekávaná výsledná hodnota je 20.
+Mějme dvě vlákna, která postupně inkrementují sdílený čítač. Každé vlákno má čítač postupně zvýšovat o 10 (po jednom). Očekávaná výsledná hodnota je 20.
 
 Aby bylo možné jednoduše pozorovat problém, provádějte změnu čítače následujícím způsobem:
 
