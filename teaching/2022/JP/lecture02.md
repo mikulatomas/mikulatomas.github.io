@@ -298,6 +298,30 @@ for x, _ in ((10, 20), (5, 2), (20, 30)):
 {% endhighlight %}
 </div>
 
+Vytvoření dvojrozměrného seznamu.
+
+{% highlight python linenos %}
+matrix = [
+    [1, -2, 5, 20],
+    [0, 2, 3, 400],
+    [100, 2, 3, 4]
+]
+
+# problém - vytvoření matice 2x3 vyplněné nulama
+matrix_zeroes = [[0] * 3] * 2
+
+# pozor, nastane však problém!
+matrix_zeroes[0][0] = 1
+
+# správně tedy, v budoucnu se dozvíme ještě elegantnější řešení
+matrix_zeroes = []
+
+for _ in range(2):
+    matrix_zeroes.append([0] * 3)
+
+matrix_zeroes[0][0] = 1
+{% endhighlight %}
+
 Iterace přes množinu.
 
 {% highlight python linenos %}
