@@ -257,11 +257,11 @@ def subtract(a, b):
     """Subtract b from a.
 
     Args:
-        a (int): Number to subtract from.
-        b (int): Number being subtracted.
+        a: Number to subtract from.
+        b: Number being subtracted.
 
     Returns:
-        [int]: Result of subtraction.
+        Result of subtraction.
     """
     return a - b
 
@@ -514,8 +514,8 @@ pytest
 
 Zatím není nutné předchozím krokům rozumět, o publikování a instalovaní balíčků si více řekneme na konci tohoto kurzu.
 
-## Úkoly
+<!-- ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
 
 * **L03E01**: Read points [[Náhled](https://github.com/kmi-jp/template-L03E01)], [[Příjmout úkol](https://classroom.github.com/a/FpicPoW7)]
-* **L03E02**: Matrix multiplication [[Náhled](https://github.com/kmi-jp/template-L03E02)], [[Příjmout úkol](https://classroom.github.com/a/0CtAuBs6)]
+* **L03E02**: Matrix multiplication [[Náhled](https://github.com/kmi-jp/template-L03E02)], [[Příjmout úkol](https://classroom.github.com/a/0CtAuBs6)] -->
