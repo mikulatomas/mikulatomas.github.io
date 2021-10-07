@@ -488,6 +488,32 @@ from .. import formats
 from ..filters import equalizer
 {% endhighlight %}
 
+### Instalace externích balíčku
+V budoucnu rozebereme detailněji, aktuálně pro nás bude relevantní, že balíčky v drtivé většině instalujeme z [Python Package Index (PyPI)](https://pypi.org) pomocí nástroje `pip`.
+
+Detailnější popis nalezneme v [dokumentaci](https://packaging.python.org/tutorials/installing-packages/#installing-from-pypi).
+
+Od dnešního semináře budou testy na splnění úkolu realizované externí knihovnou `pytest`, kterou je tedy možné instalovat příkazem:
+
+{% highlight bash linenos %}
+pip install pytest
+{% endhighlight %}
+
+Posléze ve složce s repozitářem úkolu L03E01 stačí spustit příkaz:
+
+{% highlight bash linenos %}
+pytest tests.py
+{% endhighlight %}
+
+A v případě úkolu obsahující balíček (například L03E02) je nutné balíček nejprve lokálně nainstalovat a poté testy spustit:
+
+{% highlight bash linenos %}
+pip install -e .
+pytest
+{% endhighlight %}
+
+Zatím není nutné předchozím krokům rozumět, o publikování a instalovaní balíčků si více řekneme na konci tohoto kurzu.
+
 <!-- ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
 
