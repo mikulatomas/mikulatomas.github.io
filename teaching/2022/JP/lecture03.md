@@ -499,7 +499,7 @@ Od dnešního semináře budou testy na splnění úkolu realizované externí k
 pip install pytest
 {% endhighlight %}
 
-Posléze ve složce s repozitářem úkolu L03E01 stačí spustit příkaz:
+Posléze ve složce s repozitářem úkolu L03E01 stačí spustit příkaz (kde soubor `tests.py` obsahuje testy):
 
 {% highlight bash linenos %}
 pytest tests.py
