@@ -1,7 +1,7 @@
 ---
 layout: default
 courses: PDS
-title: 2. Práce s vlákny
+title: 3. Bakery algoritmus
 year: 2022
 ---
 
