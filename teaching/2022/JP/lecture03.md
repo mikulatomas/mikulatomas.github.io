@@ -303,9 +303,6 @@ Vlastní modul pak můžeme vytvořit jednoduše. Vytvořme soubor `list_operati
 def subtract_lists(list1, list2):
     """Subtract two list piecewise."""
 
-    if len(list1) != len(list2):
-        raise ValueError(f"Lists are not same length, {len(list1)} and {len(list2)} was given.")
-    
     result = []
 
     for a, b in zip(list1, list2):
@@ -315,9 +312,6 @@ def subtract_lists(list1, list2):
 
 def sum_lists(list1, list2):
     """Sum two list piecewise."""
-
-    if len(list1) != len(list2):
-        raise ValueError(f"Lists are not same length, {len(list1)} and {len(list2)} was given.")
     
     result = []
 
