@@ -1,522 +1,609 @@
 ---
 layout: default
 courses: JP
-title: 6. Iterátory a comprehension (WIP)
+title: 6. Třídy a dědičnost (2) (WIP)
 year: 2022
 ---
 
-## 6. Iterátory a comprehension
+## 5. Třídy a dědičnost (2)
 
-## Protokol iterování (Iteration protocol)
-Na předchozích semináři jsme mohli vidět použití protokolu iterování v cyklu `for`.
+### Dunder metody
+Speciální metody sloužící k implementaci podpory pro vestavěné funkce Pythonu a jinou rozšiřující funkcionalitu (např. `__init__` jakožto konstruktor). Přehled dunder metod je dostupný [zde](https://docs.python.org/3/reference/datamodel.html#basic-customization).
 
-{% highlight python linenos %}
-for x in [1, 2, 3, 4]:
-    print(x)
-{% endhighlight %}
-
-Díky protokolu iterování funguje cyklus `for` (a všechny nástroje využívající postupující zleva doprava např. `while`, list comprehensions - ty uvidíme později) pro všechny objekty které jsou iterovatelné (takzvané *iterable*).
-
-Koncept iterable je generalizací pojmu sekvence. Objekt je považován za iterovatelný pokud je fyzicky uložen jako sekvence nebo se jedná o objekt který produkuje během iterace jednu hodnotu v jeden okamžik (například během `for` loopu).
-
-**Terminologie: iterable vs iterator**
-* *iterable* - objekt podporující volání `iter()`
-* *iterator* - objekt vrácený voláním `iter()` podporující volání `next()`
+#### String reprezentace
+Implementací dunder metod `__repr__` a `__str__` implementujeme chování funkcí `repr()` a `str()`
 
 {% highlight python linenos %}
-iterator = iter([1, 2, 3])
-
-next(iterator)
-next(iterator)
-next(iterator)
-# exception StopIteration
-next(iterator)
-{% endhighlight %}
-
-Pro podporu funkce `iter()` je nutné implementovat dunder metodu `__iter__`. Iterátor produkovaný funkcí `iter()` musí implementovat dunder metody `__next__` a vyvolat `StopIteration` na konci produkce hodnot.
-
-S iterable (iterovatelný objekt) jsme se již setkali mnohokrát:
-
-{% highlight python linenos %}
-point = {"x": 10, "y": 20}
-point.keys() # view, neni iterator, stejne tak .items(), .values()
-
-# iterátor lze ale jednoduše získat
-iterator = iter(point)
-
-next(iterator)
-next(iterator)
-# exception StopIteration
-next(iterator)
-{% endhighlight %}
-
-Rovněž zde vidíme důvod proč bylo nutné použít `list()` pro zobrazení celého výsledku `range()`.
-
-{% highlight python linenos %}
-list(range(5))
-
-iterator = iter(range(5))
-
-next(iterator)
-{% endhighlight %}
-
-Stejně tak pro `enumerate()`.
-
-{% highlight python linenos %}
-list(enumerate(range(5)))
-
-iterator = iter(enumerate(range(5)))
-
-next(iterator)
-{% endhighlight %}
-
-Funkce `zip()`, `enumerate()`, `filter()` vrací iterable a rovněž iterable přijímají, lze je tedy zanořovat.
-
-{% highlight python linenos %}
-list(zip(enumerate(range(10)), range(10)))
-{% endhighlight %}
-
-## Comprehension
-Comprehension spolu s cykly jsou nejčastější případy použití iteračního protokolu.
-
-Pokud budeme chtít umocnit seznam čísel, můžeme napsat klasický `for` cyklus.
-
-{% highlight python linenos %}
-list(enumerate(range(5)))
-
-iterator = iter(enumerate(range(5)))
-
-next(iterator)
-{% endhighlight %}
-
-Funkce `zip()`, `enumerate()`, `filter()` vrací iterable a rovněž iterable přijímají, lze je tedy zanořovat.
-
-{% highlight python linenos %}
-squares = []
-
-for number in numbers:
-    squares.append(number ** 2)
-{% endhighlight %}
-
-Použití *list comprehension*:
-
-{% highlight python linenos %}
-squares = [number ** 2 for number in numbers]
-{% endhighlight %}
-
-Obecně platí předpis:
-
-{% highlight python linenos %}
-new_list = [expression for member in iterable]
-{% endhighlight %}
-
-Výsledkem list comprehension je vždy nový seznam. Je dobré je používat pouze pokud chceme vytvořit nový seznam výsledků. Dále pak platí, že pokud je list comprehension delší než dva řádky, je vhodnější (čitelnější) použít klasický `for` cyklus.
-
-{% highlight python linenos %}
-squares_minus = [number ** 2 for number in [number - 5 for number in numbers]]
-{% endhighlight %}
-
-### Podmínky v list comprehension
-#### Filtrování
-Podmínky v list comprehension můžeme použít k filtrování. Nejprve se podíváme jak bychom napsali řešení klasicky:
-
-{% highlight python linenos %}
-sentence = 'the rocket came back from mars'
-
-vowels = []
-
-for char in sentence:
-    if char in 'aeiou':
-        vowels.append(char)
-{% endhighlight %}
-
-A nyní řešení pomoci list comprehension:
-
-{% highlight python linenos %}
-vowels = [i for i in sentence if i in 'aeiou']
-{% endhighlight %}
-
-Obecný předpis je tedy:
-
-{% highlight python linenos %}
-new_list = [expression for member in iterable (if conditional)]
-{% endhighlight %}
-
-#### Úprava prvků
-Dále lze podmínky použít k změně hodnot v seznamu dle podmínky. Nejprve klasické řešení:
-
-{% highlight python linenos %}
-numbers = [10, 20, -5, 10]
-abs_numbers = []
-
-for number in numbers:
-    if number > 0:
-        abs_numbers.append(number)
-    else:
-        abs_numbers.append(abs(number))
-{% endhighlight %}
-
-A nyní řešení pomoci list comprehension:
-
-{% highlight python linenos %}
-numbers = [10, 20, -5, 10]
-
-abs_numbers = [number if number > 0 else abs(number) for number in numbers]
-{% endhighlight %}
-
-Obecný předpis je tedy:
-
-{% highlight python linenos %}
-new_list = [expression (if conditional) for member in iterable]
-{% endhighlight %}
-
-### Zanořování list comprehension
-List comprehension můžeme zanořovat, situaci demonstrujeme výpočtem kartézského součinu, nejprve klasickým způsobem:
-
-{% highlight python linenos %}
-colors = ['red', 'green', 'blue']
-sizes = ['S', 'M', 'L', 'XL']
-
-tshirts = []
-for color in colors:
-    for size in sizes:
-        tshirts.append((color, size))
-{% endhighlight %}
-
-A nyní řešení pomoci list comprehension:
-
-{% highlight python linenos %}
-tshirts_by_color = [(color, size) for color in colors for size in sizes]
-
-# všimněme si, že na pořadí samozřejmné záleží
-tshirts_by_size = [(color, size) for size in sizes for color in colors]
-
-assert tshirts_by_color != tshirts_by_size
-{% endhighlight %}
-
-Obecně pak můžeme použít předpis:
-
-{% highlight python linenos %}
-[expression for target1 in iterable1 if condition1
-            for target2 in iterable2 if condition2 ...
-            for targetN in iterableN if conditionN]
-{% endhighlight %}
-
-### Set comprehension
-Jak jsme viděli, v případě list comprehension je výsledkem vždy seznam. Pokud požadujeme aby výsledkem byla množina, můžeme použít *set comprehension*.
-
-{% highlight python linenos %}
-sentence = 'the rocket came back from mars'
-
-unique_vowels = {i for i in sentence if i in 'aeiou'}
-{% endhighlight %}
-
-### Dict comprehension
-Podobně pak v případě slovníku *dict comprehension*.
-
-{% highlight python linenos %}
-sentence = 'the rocket came back from mars'
-
-word_len = {word: len(word) for word in sentence.split(' ')}
-{% endhighlight %}
-
-### Poznámka k rozsahu platnosti
-V případě comprehension nejsou lokální proměnné dostupné:
-
-{% highlight python linenos %}
-[x for x in range(10)]
-
-# nedostupná proměnná
-x
-
-# oproti tomu klasický for cyklus
-output = []
-
-for x in range(10):
-    output.append(x)
-
-# dostupná proměnná
-x
-{% endhighlight %}
-
-### Poznámka k výkonu
-Ve většině případů comprehensions přinesou znatelné zrychlení (často až dvojnásobné). Iterace comprehension jsou v rámci interpretu prováděny rychlostí jazyka C (narozdíl od běžného for cyklu).
-
-Především pro případy, kdy iterujeme přes velká data, je vždy lepší použít comprehension, pozor však na čitelnost kódu.
-
-## Generátorové funkce a výrazy
-V dnešních verzích jazyka Python je prokrastinace využívána mnohem častěji než dříve, rovněž poskytované nástroje jsou propracovanější. Namísto produkování celého výsledku předtím než je k němu přistoupeno, jsou jednotlivé prvky (například prvky seznamu) produkovány v čase k jejich přístupu.
-
-{% highlight python linenos %}
-big_data = range(100000000000000)
-small_data = range(1)
-
-# 180 ns ± 14.4 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-%timeit zip(small_data, small_data)
-# 184 ns ± 13.5 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-%timeit zip(big_data, big_data)
-
-big_zip = zip(big_data, big_data)
-# jednotlivé hodnoty jsou generovány postupně
-# zde se vypočítá první hodnota
-next(big_zip)
-# zde se vypočítá druhá hodnota
-next(big_zip)
-
-# nelze, tato hodnota neexistuje (generatory obecne nejsou indexovatelné)
-big_zip[100000]
-{% endhighlight %}
-
-### Generátorové funkce
-Narozdíl od normálních funkcí, které skončí výpočet a vrátí hodnotu (pomoci příkazu `return`), generátorové funkce automaticky uspávají a probouzejí jejich vykonávání a stav po každém vrácení výsledku (pomoci příkazu `yield`). V rámci stavu jsou uloženy například lokální proměnné, proto je možné je zachovat napříč výpočtem.
-
-Generátorové funkce jsou úzce spojené s iteračním protokolem. Aby bylo možné iterační protokol používat jsou funkce obsahující `yield` kompilovány jako generátory. Nejedná se tedy o klasické funkce, jejich architektura zaručuje aby vracely objekt podporující iterační protokol. Později, jakmile je zavoláme, vrací generátor objekt, který podporuje iteration rozhraní (automaticky vytvoří metodu `__next__`).
-
-V rámci generátorové funkce můžeme použít rovněž i příkaz `return`, ten pak slouží na předčasné ukončení výpočtu (interne pomoci `StopIteration`).
-
-{% highlight python linenos %}
-# klasická funkce
-def calculate_squares(n):
-    for i in range(n):
-        return i ** 2
-
-# generátorová funkce
-def generate_squares(n):
-    for i in range(n):
-        yield i ** 2
-
-# 683 ns ± 52 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
-%timeit calculate_squares(20000)
-
-# 244 ns ± 6.12 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
-%timeit generate_squares(20000)
-{% endhighlight %}
-
-Generátorové funkce je nejvhodnější používat tehdy když nevíme, zda budeme potřebovat celý výsledek nebo pouze jeho část.
-
-{% highlight python linenos %}
-# v rámci for loopu
-for square in generate_squares(20000000):
-    print(square)
-    if square > 100:
-        break
-
-# jako generátor
-generator = generate_squares(20000000)
-
-next(generator)
-next(generator)
-next(generator)
-{% endhighlight %}
-
-Generátory jsou *single-iteration* objekty. To znamená, že je možné je proiterovat pouze jednou. Pokud se chceme k výsledkům vracet, je nutné je ukládat.
-
-{% highlight python linenos %}
-generator = generate_squares(20)
-
-for square in generator:
-    print(square)
-
-# zde se již nic nevypíše, generátor je prázdný
-for square in generator:
-    print(square)
-{% endhighlight %}
-
-Pokud výsledky uložíme do seznamu, můžeme je procházet vícekrát.
-
-{% highlight python linenos %}
-generator = list(generate_squares(20))
-
-for square in generator:
-    print(square)
-
-# zde se vypise
-for square in generator:
-    print(square)
-{% endhighlight %}
-
-### Generátorové výrazy
-Obdoba list comprehension v kontextu iterátorů. Generátory můžeme vytvářet jednodušeji než definováním funkce.
-
-{% highlight python linenos %}
-# klasicky list comprehension (výpočet proběhne okamžitě)
-[number ** 2 for number in range(10)]
-# vrací - [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-
-# generátorový výraz
-(number ** 2 for number in range(10))
-# vrací - <generator object <genexpr> at 0x106b73ac0>
-
-generator = (number ** 2 for number in range(10))
-
-# zde se vypočítá první hodnota
-next(generator)
-# zde se vypočítá druhá hodnota
-next(generator)
-{% endhighlight %}
-
-## Sekvence vs Iterátory
-Nyní se podíváme na vytvoření vlastní sekvence pomoci implementování dunder metod `__len__` a `__getitem__`.
-
-{% highlight python linenos %}
-class Sentence:
-    """Represents one sentence."""
-
-    def __init__(self, text):
-        self.text = text
-        self.words = text.split(' ')
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = initial_credits
     
     def __repr__(self):
-        return f"Sentence({self.text})"
+        return f"CreditAccount({self.owner}, {self.balance})"
     
-    def __len__(self):
-        return len(self.words)
+    def __str__(self):
+        return self.__repr__()
     
-    def __getitem__(self, index):
-        return self.words[index]
-    
-sentence = Sentence("Ahoj svete jak se mas")
+credit_account_1 = CreditAccount("Lukas Novak")
+credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
 
-# magie
-for word in sentence:
-    print(word)
-
-sentence[2]
-
-len(sentence)
+credit_account_1
+print(credit_account_1)
+repr(credit_acount_1)
 {% endhighlight %}
 
-Nyní se podíváme na stejnou věc pohledem iterátoru. Zde je důležité rozlišit *iterable* a *iterator*. Třída `Sentence` je iterable, třída `SentenceIterator` je pak iterátor, který vrací metoda `Sentence.__iter__`.
-
-Pro vytvoření iterátoru je tedy nutné implementovat dunder metody `__iter__` a `__next__`.
+#### Převod na jiné datové typy
 
 {% highlight python linenos %}
-class Sentence:
-    """Represents one sentence."""
-    def __init__(self, text):
-        self.text = text
-        self.words = text.split(' ')
+__bool__ # chování funkce bool()
+__complex__ # chování funkce complex()
+__int__ # chování funkce int()
+__float__ # chování funkce float()
+__hash__ # chování funkce hash()
+{% endhighlight %}
+
+Následující příklad dále implementuje dunder metody `__bool__` a `__int__`.
+
+{% highlight python linenos %}
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = initial_credits
     
     def __repr__(self):
-        return f"Sentence({self.text})"
+        return f"CreditAccount({self.owner}, {self.balance})"
     
-    def __iter__(self):
-        return SentenceIterator(self.words)
+    def __str__(self):
+        return self.__repr__()
+    
+    def __bool__(self):
+        return bool(self.balance)
+    
+    def __int__(self):
+        return int(self.balance)
+    
+credit_account_1 = CreditAccount("Lukas Novak")
+credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
 
-class SentenceIterator():
-    def __init__(self, words):
-        self.words = words
-        self.index = 0
+assert bool(credit_account_1) == False
+assert bool(credit_account_2) == True
+
+assert int(credit_account_1) == 0
+{% endhighlight %}
+
+#### Unární číselné operátory
+
+{% highlight python linenos %}
+__abs__ # chování funkce abs()
+__neg__ # chování unárního minus
+__pos__ # chování unárního plus
+{% endhighlight %}
+
+#### Porovnávání
+
+{% highlight python linenos %}
+__lt__ # chování <
+__le__ # chování <=
+__eq__ # chování ==
+__ne__ # chování !=
+__gt__ # chování >
+__ge__ # chování >=
+{% endhighlight %}
+
+Následující příklad dále implementuje dunder metodu `__lt__`.
+
+{% highlight python linenos %}
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = initial_credits
     
-    def __next__(self):
-        try:
-            word = self.words[self.index]
-        except IndexError:
-            raise StopIteration
+    def __repr__(self):
+        return f"CreditAccount({self.owner}, {self.balance})"
+    
+    def __str__(self):
+        return self.__repr__()
+    
+    def __bool__(self):
+        return bool(self.balance)
+    
+    def __int__(self):
+        return int(self.balance)
+    
+    def __lt__(self, other):
+        if type(other) == CreditAccount:
+            return self.balance < other.balance
+
+        return NotImplemented
+
+    
+credit_account_1 = CreditAccount("Lukas Novak")
+credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
+
+credit_account_1 < credit_account_2
+credit_account_2 < credit_account_1
+{% endhighlight %}
+
+#### Aritmetické operátory
+
+{% highlight python linenos %}
+__add__ # chování +
+__sub__ # chování -
+__mul__ # chování *
+__truediv__ # chování /
+__floordiv__ # chování //
+__mod__ # chování %
+__divmod__ # chování divmod()
+__pow__ # chování ** nebo pow()
+__round__ # chování round()
+{% endhighlight %}
+
+Následující příklad dále implementuje dunder metodu `__add__`. V případě, že pro nějaký typ nejsou dunder metody implementovány, je nutné vracet konstantu `NotImplemented`.
+
+{% highlight python linenos %}
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = initial_credits
+    
+    def __repr__(self):
+        return f"CreditAccount({self.owner}, {self.balance})"
+    
+    def __str__(self):
+        return self.__repr__()
+    
+    def __bool__(self):
+        return bool(self.balance)
+    
+    def __int__(self):
+        return int(self.balance)
+    
+    def __lt__(self, other):
+        if type(other) == CreditAccount:
+            return self.balance < other.balance
+
+        return NotImplemented
+    
+    def __add__(self, other):
+        if type(other) == CreditAccount:
+            return self.balance + other.balance
+
+        return NotImplemented
+
+    
+credit_account_1 = CreditAccount("Lukas Novak")
+credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
+
+credit_account_1 + credit_account_2
+{% endhighlight %}
+
+Aritmetické operátory je možné implementovat pro "oba směry". V situaci kdy vyhodnocujeme `x + y` Python hledá implementaci `x.__add__` nebo `y.__radd__`.
+
+{% highlight python linenos %}
+__radd__
+__rsub__
+__rmul__
+__rtruediv__
+__rfloordiv__
+__rmod__
+__rdivmod__
+__rpow__
+{% endhighlight %}
+
+#### Kombinované operátory přiřazení s aritmetickými operacemi
+
+Je běžné, ne však nutné, aby výsledná metoda vracela `self`.
+
+{% highlight python linenos %}
+__iadd__ # chování +=
+__isub__ # chování -=
+__imul__ # chování *=
+__itruediv__ # chování /=
+__ifloordiv__ # chování //=
+__imod__ # chování %=
+__ipow__ # chování **=
+{% endhighlight %}
+
+Následující příklad dále implementuje dunder metodu `__iadd__`. V případě, že pro nějaký typ nejsou dunder metody implementovány, je nutné vracet konstantu `NotImplemented`.
+
+{% highlight python linenos %}
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = initial_credits
+    
+    def __repr__(self):
+        return f"CreditAccount({self.owner}, {self.balance})"
+    
+    def __str__(self):
+        return self.__repr__()
+    
+    def __bool__(self):
+        return bool(self.balance)
+    
+    def __int__(self):
+        return int(self.balance)
+    
+    def __lt__(self, other):
+        if type(other) == CreditAccount:
+            return self.balance < other.balance
+
+        return NotImplemented
+    
+    def __add__(self, other):
+        if type(other) == CreditAccount:
+            return self.balance + other.balance
+
+        return NotImplemented
+    
+    def __iadd__(self, value):
+        if type(value) == int:
+            self.balance += value
+            return self
         
-        self.index += 1
-        return word
-    
-    def __iter__(self):
-        return self
-    
-sentence = Sentence("Ahoj svete jak se mas")
+        return NotImplemented
 
-# magie
-for word in sentence:
-    print(word)
+    
+credit_account_1 = CreditAccount("Lukas Novak")
+credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
 
-len(sentence)
+credit_account_1 += 200
+
+credit_account_1 += credit_account_2
 {% endhighlight %}
 
-Další možností je situaci implementovat jako generátor. Tady pouze upozorním, že nevyužíváme opravdového postupného výpočtu, pro demonstraci je však tento příklad dostačující.
+#### Bitové operátory
 
 {% highlight python linenos %}
-class Sentence:
-    """Represents one sentence."""
-    def __init__(self, text):
-        self.text = text
-        self.words = text.split(' ')
-    
-    def __repr__(self):
-        return f"Sentence({self.text})"
-    
-    def __iter__(self):
-        for word in self.words:
-            yield word
-        
-sentence = Sentence("Ahoj svete jak se mas")
-
-# magie
-for word in sentence:
-    print(word)
-
-iterator = iter(sentence)
-
-next(iterator)
-next(iterator)
-next(iterator)
-next(iterator)
-next(iterator)
-# StopIteration
-next(iterator)
+__invert__ # chování ~
+__lshift__ # chování <<
+__rshift__ # chování >>
+__and__ # chování &
+__or__ # chování |
+__xor__ # chování ^
 {% endhighlight %}
 
-Jak využít toho, aby byl výpočet vyhodnocován postupně? Zkusme navrhnout generátor opravdový.
+#### Emulace kolekcí
+
+Důležité, dostaneme se k nim později.
 
 {% highlight python linenos %}
-def split_generator(text, sep=[" "]):
-    """Creates generator for splitted text by given separator"""
-    word = []
-
-    for char in text:
-        if char in sep:
-            if word:
-                yield "".join(word)
-                word = []
-        else:
-            word.append(char)
-
-    if word:
-        yield "".join(word)
-
-class Sentence:
-    """Represents one sentence."""
-    def __init__(self, text):
-        self.text = text
-    
-    def __repr__(self):
-        return f"Sentence({self.text})"
-    
-    def __iter__(self):
-        for word in split_generator(self.text):
-            yield word
-        
-        # zde je rovněž možné použít generator expression
-        # return (word for word in split_generator(self.text))
-
-        # nejlepším řešením je však vrátit samotný generátor
-        # return split_generator(self.text)
-
-sentence = Sentence("Ahoj svete jak se mas")
-
-# magie
-for word in sentence:
-    print(word)
-    if word == "svete":
-        break 
-
-iterator = iter(sentence)
-
-next(iterator)
-next(iterator)
-next(iterator)
-next(iterator)
-next(iterator)
-# StopIteration
-next(iterator)
+__index__ # chování převodu na integer například při slicingu
+__len__ # chování len()
+__getitem__ # chování x[20]
+__setitem__ # chování x[20] = 2
+__delitem__ # chování del
+__contains__ # chování in
 {% endhighlight %}
 
+### Použití implementovaných dunder metod
+Implementovanou funkcionalitu můžeme použít rovněž v rámci třídy.
+
+{% highlight python linenos %}
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = initial_credits
+    
+    def __repr__(self):
+        return f"CreditAccount({self.owner}, {self.balance})"
+    
+    def __str__(self):
+        return self.__repr__()
+    
+    def __bool__(self):
+        return bool(self.balance)
+    
+    def __int__(self):
+        return int(self.balance)
+    
+    def __lt__(self, other):
+        if type(other) == CreditAccount:
+            return self.balance < other.balance
+
+        return NotImplemented
+    
+    def __add__(self, other):
+        if type(other) == CreditAccount:
+            return self.balance + other.balance
+
+        return NotImplemented
+    
+    def __iadd__(self, value):
+        if type(value) == int:
+            self.balance += value
+            return self
+        
+        return NotImplemented
+    
+    def __isub__(self, value):
+        if type(value) == int:
+            self.balance -= value
+            return self
+        
+        return NotImplemented
+    
+    def transfer_to(self, other, value):
+        """Transfer credit into another credit account. Negative balance is allowed.
+
+        Args:
+            other: Target of credit transfer.
+            value: Amount of credit to be transfered.
+        """
+        self -= value
+        other += value
+
+
+credit_account_1 = CreditAccount("Lukas Novak")
+credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
+
+credit_account_1.transfer_to(credit_account_2, 200)
+
+credit_account_1
+credit_account_2
+{% endhighlight %}
+
+### Vestavěné funkce
+Dunder metody představují elegantní řešení pro implementaci podpory vestavěných funkcí. Většinou je tedy lepší využívat implementace těchto metod pro podporu `len()` než implementování vlastní metody `object.length()`.
+
+Protipříkladem je pomyslná třída `Vector` ve které chceme implementovat výpočet délky vektoru. Pozor, použití `len()` na instanci třídy `Vector` není vhodné, funkci `len()` používáme v kontextu kolekcí pro zjištění počtu prvků. U třídy `Vector` požadujeme jinou sémantiku. V takovém případě je tedy vhodnější zvolit implementaci metody `Vector.length()`, rovněž jsem se setkal s implementace dunder metody `__abs__()` a následné používání funkce `abs()`.
+
+## Dekorátory ve třídách
+
+### @property
+V jazyce Python nepoužíváme klasické (například Javovské) gettery, settery (tedy metody s názvy `get_temperature` a `set_temperature`). To plyne z vlastnosti veřejné dostupnosti všech hodnot objektu (narozdíl od jazyků jako je třeba Java). Vraťme se k jednoduchému příkladu třídy `CreditAccount`. Vlastnost `CreditAccount.balance` je dostupná pomoci tečkového operátoru.
+
+{% highlight python linenos %}
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = initial_credits
+
+credit_account = CreditAccount("Lukas Novak")
+
+credit_account.balance
+{% endhighlight %}
+
+Co můžeme dělat pokud chceme například ověřovat, že `balance` nemůže být nastavena na zápornou hodnotu?
+
+{% highlight python linenos %}
+# špatné, ale bohužel časté řešení
+
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = 0
+        self.set_balance(initial_credits)
+    
+    def set_balance(self, new_balance):
+        if new_balance < 0:
+            raise ValueError("Balance cannot be negative number!")
+
+        self.balance = new_balance
+
+credit_account = CreditAccount("Lukas Novak", 0)
+
+credit_account.set_balance(0)
+
+# negativní hodnotu balance můžeme stále nastavit
+credit_account.balance = -100
+{% endhighlight %}
+
+Pro příklady kdy chceme modifikovat chování přístupu k vlastnosti třídy je nutné použít dekorátor `@property`.
+
+{% highlight python linenos %}
+# správně
+
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self._balance = 0
+        self.balance = initial_credits
+    
+    @property
+    def balance(self):
+        return self._balance
+    
+    @balance.setter
+    def balance(self, new_balance):
+        """Sets new value of balance, new value cannot be negative."""
+
+        if new_balance < 0:
+            raise ValueError("Balance cannot be negative number!")
+
+        self._balance = new_balance
+
+    @balance.deleter
+    def balance(self):
+        self._balance = 0
+
+credit_account = CreditAccount("Lukas Novak", 0)
+
+credit_account.balance = 10
+
+# volani deleteru
+del credit_account.balance
+
+credit_account.balance
+
+# volani setteru
+credit_account.balance = -100
+{% endhighlight %}
+
+### @classmethod vs @staticmethod
+
+Nejprve se podívejme na dekorátor `@classmethod`. Tento dekorátor lze použít v situaci kdy je nutné metodám předat odkaz na celou třídu. Demonstrovat jej můžeme na příkladu metod `from_*`, tedy metod které umí vytvořit instanci třídy různými způsoby.
+
+{% highlight python linenos %}
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = initial_credits
+    
+    @classmethod
+    def from_csv(cls, input_string, separator=","):
+        """Creates CreditAccount class from csv string"""
+        owner, initial_credits = input_string.split(separator)
+
+        return cls(owner, int(initial_credits))
+
+credit_account = CreditAccount.from_csv("Lukas Novak,200")
+
+credit_account.owner
+credit_account.balance
+{% endhighlight %}
+
+Speciální dekorátor `@staticmethod` naopak nevyžaduje (a nemá) přístup ke své třídě.
+
+{% highlight python linenos %}
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = initial_credits
+    
+    @staticmethod
+    def credit_to_money(credit, exchange_rate):
+        """Calculates money value of credits.
+
+        Args:
+            credit: amount of credits
+            exchange_rate: how many money per one credit
+
+        Returns: money value
+        """
+        return credit * exchange_rate
+
+# dostupné z třídy
+CreditAccount.credit_to_money(100, 20)
+
+credit_account = CreditAccount("Lukas Novak", 200)
+
+# dostupné rovněž z objektu
+credit_account.credit_to_money(100, 20)
+{% endhighlight %}
+
+### @dataclass
+Pro rychlé vytvoření třídy lze použít dekorátor `@dataclass`.
+
+{% highlight python linenos %}
+from dataclasses import dataclass
+
+@dataclass
+class CreditAccount:
+    """Account with stored credits."""
+    owner: str
+    balance: int = 0
+{% endhighlight %}
+
+Dekorátor `@dataclass` přidá automaticky konstruktor:
+
+{% highlight python linenos %}
+def __init__(self, owner: str, balance: int = 0):
+    self.owner = owner
+    self.balance = balance
+{% endhighlight %}
+
+Dekorátor `@dataclass` je mnohem komplexnější, celkový popis je možné nalézt [zde](https://docs.python.org/3/library/dataclasses.html). Pravděpodobně nás zaskočilo, že uvádíme datový typ u jednotlivých vlastností. Jedná se o nápovědu typování, o této možnosti v jazyku Python si řekneme v budoucnu.
 
 <!-- ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
@@ -525,4 +612,3 @@ Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/20
 * **L01E02**: Integer input [[Náhled](https://github.com/kmi-jp/template-L01E02)], [[Příjmout úkol]()]
 * **L01E03**: Point input [[Náhled](https://github.com/kmi-jp/template-L01E03)], [[Příjmout úkol]()]
 * **L01E04PEP**: PEP8 format [[Náhled](https://github.com/kmi-jp/template-L01E04PEP)], [[Příjmout úkol]()] -->
-
