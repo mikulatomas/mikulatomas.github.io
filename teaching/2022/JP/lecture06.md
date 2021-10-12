@@ -5,7 +5,7 @@ title: 6. Třídy a dědičnost (2) (WIP)
 year: 2022
 ---
 
-## 5. Třídy a dědičnost (2)
+## 6. Třídy a dědičnost (2)
 
 ### Dunder metody
 Speciální metody sloužící k implementaci podpory pro vestavěné funkce Pythonu a jinou rozšiřující funkcionalitu (např. `__init__` jakožto konstruktor). Přehled dunder metod je dostupný [zde](https://docs.python.org/3/reference/datamodel.html#basic-customization).

@@ -1,11 +1,11 @@
 ---
 layout: default
 courses: JP
-title: 6. Iterátory a comprehension (WIP)
+title: 7. Iterátory a comprehension (WIP)
 year: 2022
 ---
 
-## 6. Iterátory a comprehension
+## 7. Iterátory a comprehension
 
 ## Protokol iterování (Iteration protocol)
 Na předchozích semináři jsme mohli vidět použití protokolu iterování v cyklu `for`.
