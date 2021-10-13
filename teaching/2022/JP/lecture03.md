@@ -292,6 +292,7 @@ Ukázka importování vestavěného modulu `math` pomoci příkazu `import`.
 {% highlight python linenos %}
 import math
 
+
 math.sqrt(6)
 
 math.__name__
