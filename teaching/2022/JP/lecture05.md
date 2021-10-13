@@ -1,16 +1,19 @@
 ---
 layout: default
 courses: JP
-title: 5. Třídy a dědičnost (1) (WIP)
+title: 5. Objektově orientované programování (OOP) (WIP)
 year: 2022
 ---
 
-## 5. Třídy a dědičnost (1)
+## 5. Objektově orientované programování (OOP)
+Programovací paradigma, které zapouzdřuje vlastnosti a funkcionalitu do individuálních objektů. Fakticky jsme se s tímto paradigmatem potýkali celou dovou.
+
+Objekt reprezentující řetězec `"ahoj svete"` obsahuje rovněž funkcionalitu `"ahoj svete".split()`, která vytvoří seznam obsahující jednotlivé řetězce, které odpovídají řětězcům vzniklým rozdělěním původního řětězce mezerami.
 
 ## Třídy
 Vytváření uživatelsky definovaných tříd (následně pak objektů) budeme v tuto chvíli chápat hlavně jako tvorbu vlastních datových struktur s navázanou funkcionalitou.
 
-Sahat po vytváření vlastní datové struktury bychom měli pouze v případě, že vestavěné datové struktury nejsou dostatečné. Zkusme realizovat účet s kredity pomoci vestavěné datové struktury `dict`.
+Sahat po vytváření vlastní datové struktury bychom měli pouze v případě, že vestavěné (primitivní) datové struktury nejsou dostatečné. Zkusme realizovat účet s kredity pomoci vestavěné datové struktury `dict`.
 
 Více informací [zde](https://docs.python.org/3/tutorial/classes.html) a [zde](https://realpython.com/python3-object-oriented-programming/).
 
@@ -25,7 +28,11 @@ credit_account_1["balance"] +  credit_account_2["balance"]
 credit_account_1["balance"] - 100
 {% endhighlight %}
 
-Třída (klíčové slovo `Class`) tedy určuje jak má výsledná datová struktura vypada a fungovat.
+*Třída* (klíčové slovo `Class`) tedy slouží k vytváření uživatelsky definovaných datových struktur. Určují tedy jak má výsledná datová struktura vypada a fungovat. Na základě třídy (předpis) můžeme vytvářet jednotlivé instance třídy (objekty).
+
+Jako příklad si můžeme představit již dobře známý seznam. Jeden konkrétní seznam je instancí (objektem) třídy seznam, která popisuje jak seznamy vypadají a jak se s nimi dá pracovat. Třídy jsou tedy obecným předpisem, objekty pak konkrétní entity vytvořené na základě tohoto předpisu.
+
+Následující kód demonstruje vytvořeřní jednoduché (prázdné) třídy:
 
 {% highlight python linenos %}
 # definice prázdné třídy
@@ -53,7 +60,13 @@ class credit_account:
 {% endhighlight %}
 </div>
 
-Vytvoření prázdné třídy neni moc praktické, pojdme definici rozšířit. Všimněme si, že třída a její metody (funkce spojené s třídou) používají podobnou konvenci docstringů, budeme je tedy používat i zde.
+Vytvoření prázdné třídy neni moc praktické, pojdme definici rozšířit. Každá třída může obsahovat sadu funkcí, které jsou s třídou úzce spjaty. Těmto funkcím říkáme *metody*. Již několikrát jsme používali metodu `.split()` třídy rětězce, která umí daný řetězec rozdělit na seznam řětězců.
+
+Všimněme si, že třída a její metody používají podobnou konvenci docstringů, budeme je tedy používat (a vyžadovat) i zde.
+
+Nejdůležitější metodou každé třídy je metoda *konstruktor* `.__init__()` , zatím se nemusíme trápit, proč její název obsahuje podtržítka (to si vysvetlíme další seminář). Konstruktor nastaví počátěční stav (initial state - proto název init) nově vytvořeného objektu.
+
+Metoda `.__init__()` může obsahovat libovolný počet parametrů (podobně jako funkce), prvním parametrem však vždy musí být parametr `self`. Když je instance třídy vytvořena, je automaticky předána jako první parametr `self` metodě `.__init__()`. To je důležité pro nastavení počátečního stavu objektu (potřebujeme přístup k nově vytvořenému objektu aby jsme mohli počáteční stav nastavit).
 
 {% highlight python linenos %}
 class CreditAccount:
@@ -84,7 +97,37 @@ credit_account_1.balance += 300
 assert credit_account_1.balance == 300
 {% endhighlight %}
 
-U metod si všimněme speciálního prvního povinného argumentu `self`. Ten poskytuje odkaz na objekt samotný.
+Vytvořili jsme tedy třídu `CreditAccount`, která při vytvoření nové instance nastaví dvě vlastnosti `.owner` a `.balance` na hodnoty `owner` a `initial_credits`. Každá instance třídy `CreditAccount` bude těmito vlastnosti disponovat.
+
+Další metodou, kterou můžeme naši třídě `CreditAccount` přidat je metoda `.transfer_to(self, other, value)`.
+
+{% highlight python linenos %}
+class CreditAccount:
+    """Account with stored credits."""
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = initial_credits
+
+    def transfer_to(self, other, value):
+        """Transfer money into another account. Negative balance is allowed.
+
+        Args:
+            other: Target of money transfer.
+            value: Amount of money to be transfered.
+        """
+        self.balance -= value
+        other.balance += value
+{% endhighlight %}
+
+Asi nás nepřekvapí, že názvy metod podléhají doporučení PEP8.
 
 <div class="pep">
 {% highlight python linenos %}
@@ -98,7 +141,20 @@ class TestClass:
 class TestClass:
     def reverseOrder(self):
         pass
+{% endhighlight %}
+</div>
 
+### Přístup k vlastnostem objektu
+Narozdíl od jiných programovacích jazyků, jazyk Python přistupuje k vlastnostem objektu přímo (pomoci operátoru tečky). Programátor může modifikovat a číst libovolnou vlastnost/metodu objektu.
+
+**Není** tedy třeba vytvářet přístupové metody (takzvané gettery a settery) jako v jiných jazycích. Na přístím semináři se k této problematice ještě vrátíme.
+
+Pozor, s tímto faktem přichází velká zodpovědnost, programátor si musí sám uvědomit, jaké zásahy do objektů jsou validní a jaké mohou vést k problémům.
+
+Existuje však způsob, kterým lze komunikovat, že uživatel přistupuje k vlastnosti/metodě, která není zamýšlena jako veřejná (je používaná například pouze interně v rámci objektu).
+
+<div class="pep">
+{% highlight python linenos %}
 # PEP8 - metody/vlastnosti, které nejsou zamýšlené jako veřejné 
 # pojmenujeme s prefixem podtržítka
 class TestClass:
