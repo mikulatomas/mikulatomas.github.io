@@ -582,7 +582,7 @@ credit_account = CreditAccount("Lukas Novak", 200)
 credit_account.credit_to_money(100, 20)
 {% endhighlight %}
 
-### @dataclass
+<!-- ### @dataclass
 Pro rychlé vytvoření třídy lze použít dekorátor `@dataclass`.
 
 {% highlight python linenos %}
@@ -603,7 +603,7 @@ def __init__(self, owner: str, balance: int = 0):
     self.balance = balance
 {% endhighlight %}
 
-Dekorátor `@dataclass` je mnohem komplexnější, celkový popis je možné nalézt [zde](https://docs.python.org/3/library/dataclasses.html). Pravděpodobně nás zaskočilo, že uvádíme datový typ u jednotlivých vlastností. Jedná se o nápovědu typování, o této možnosti v jazyku Python si řekneme v budoucnu.
+Dekorátor `@dataclass` je mnohem komplexnější, celkový popis je možné nalézt [zde](https://docs.python.org/3/library/dataclasses.html). Pravděpodobně nás zaskočilo, že uvádíme datový typ u jednotlivých vlastností. Jedná se o nápovědu typování, o této možnosti v jazyku Python si řekneme v budoucnu. -->
 
 <!-- ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
