@@ -1,11 +1,11 @@
 ---
 layout: default
 courses: JP
-title: 6. Třídy a dědičnost (2) (WIP)
+title: 6. Dunder metody a dekorátory tříd (WIP)
 year: 2022
 ---
 
-## 6. Třídy a dědičnost (2)
+## 6. Dunder metody a dekorátory tříd
 
 ### Dunder metody
 Speciální metody sloužící k implementaci podpory pro vestavěné funkce Pythonu a jinou rozšiřující funkcionalitu (např. `__init__` jakožto konstruktor). Přehled dunder metod je dostupný [zde](https://docs.python.org/3/reference/datamodel.html#basic-customization).
