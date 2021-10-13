@@ -230,11 +230,11 @@ def do_twice(func):
 
 # dekorování funkce pomoci @
 @do_twice
-def multiply_list(list, by):
+def multiply_list(list_, by):
     """Multiply items from list by given value.
 
     Args:
-        list: list to be multiplied
+        list_: list to be multiplied
         by: value by which items are multiplied
 
     Returns:
@@ -242,7 +242,7 @@ def multiply_list(list, by):
     """
     result = []
 
-    for item in list:
+    for item in list_:
         result.append(item * by)
     
     return result
