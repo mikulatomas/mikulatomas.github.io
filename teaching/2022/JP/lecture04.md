@@ -100,6 +100,7 @@ def list_operation(list_, operation):
     """Applies operation on the given list"""
     return operation(list_)
 
+
 # běžná funkce
 def list_sum_squared(list_):
     """Squared sum of all members of given list"""
@@ -141,6 +142,7 @@ def my_decorator(func):
     
     return wrapper
 
+
 # námi definovaná funkce
 def my_function():
     print("Super function!")
@@ -170,6 +172,7 @@ def do_twice(func):
     
     return wrapper
 
+
 # dekorování funkce pomoci @
 @do_twice
 def my_function():
@@ -187,6 +190,7 @@ def do_twice(func):
         func()
     
     return wrapper
+
 
 # dekorování funkce pomoci @
 @do_twice
@@ -208,6 +212,7 @@ def do_twice(func):
     
     return wrapper
 
+
 # dekorování funkce pomoci @
 @do_twice
 def my_function(arg):
@@ -227,6 +232,7 @@ def do_twice(func):
         func(*args, **kwargs)
     
     return wrapper
+
 
 # dekorování funkce pomoci @
 @do_twice
@@ -286,6 +292,7 @@ def do_twice(func):
         return func(*args, **kwargs)
     
     return wrapper
+
 
 @do_twice
 def multiply_list(list_, by):
@@ -351,6 +358,7 @@ def timer(func):
 
     return wrapper_timer
 
+
 @timer
 def waste_some_time(num_times):
     for _ in range(num_times):
@@ -369,13 +377,16 @@ def waste_some_time(num_times):
     for _ in range(num_times):
         sum([i**2 for i in range(10000)])
 
+
 waste_some_time(100) 
+
 
 @timer
 @do_twice
 def waste_some_time(num_times):
     for _ in range(num_times):
         sum([i**2 for i in range(10000)])
+
 
 waste_some_time(100) 
 {% endhighlight %}
@@ -394,11 +405,13 @@ def repeat(num_times):
         return wrapper_repeat
     return decorator_repeat
 
+
 @repeat(num_times=4)
 @timer
 def waste_some_time(num_times):
     for _ in range(num_times):
         sum([i**2 for i in range(10000)])
+
 
 waste_some_time(100) 
 {% endhighlight %}
