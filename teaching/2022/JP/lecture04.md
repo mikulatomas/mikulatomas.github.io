@@ -287,7 +287,7 @@ def do_twice(func):
     return wrapper
 
 @do_twice
-def multiply_list(list, by):
+def multiply_list(list_, by):
     """Multiply items from list by given value.
 
     Args:
@@ -299,7 +299,7 @@ def multiply_list(list, by):
     """
     result = []
 
-    for item in list:
+    for item in list_:
         result.append(item * by)
     
     return result
