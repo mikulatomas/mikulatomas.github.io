@@ -59,6 +59,11 @@ Veškeré odevzdané zdrojové kódy jsou automaticky testované na plagiátorst
 #### Závěrečný projekt
 Na závěr předmětu je nutné vypracovat závěrečný projekt, detailní informace budou dodány během semestru.
 
+### `.gitignore` pro Python
+Při práci na úkolech bude vytvářeno velké množství souborů, které nechcete odesílat k odevzdání. Základní sadu souborů můžete jednoduše ignorovat umístěním speciálního souboru `.gitignore` do hlavní složky s úkolem. Obsah ukázkového `.gitignore` souboru naleznete [zde](https://github.com/github/gitignore/blob/master/Python.gitignore).
+
+V případě, že Vaše vývojové prostředí vytváří podpůrné složky (například složka `.idea/`) je možné tuto složku přidat do souboru `.gitignore`.
+
 ### Užitečné odkazy
 * [Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)
 * [Dokumentace jazyka Python3](https://docs.python.org/3/)
