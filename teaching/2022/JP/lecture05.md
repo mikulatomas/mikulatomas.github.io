@@ -207,7 +207,6 @@ U definice třídy `CreditAccount` je nutné zdůraznit první řádek definice,
 
 {% highlight python linenos %}
 from datetime import datetime
-from datetime import timedelta
 
 class CreditAccount(Account):
     """Represents a credit account."""
@@ -217,11 +216,11 @@ class CreditAccount(Account):
         super().__init__(owner, initial_balance=initial_balance)
 
         # dodané vlastnoti
-        self.expiration = datetime.now() + timedelta(days=365)
+        self.expiration = datetime.now() + datetime.timedelta(days=365)
     
     # dodaná funkcionalita
     def expires_soon(self):
-        return datetime.now() + timedelta(days=30) >= self.expiration
+        return datetime.now() + datetime.timedelta(days=30) >= self.expiration
 {% endhighlight %}
 
 ### Mixins
@@ -271,7 +270,7 @@ class ExpirableMixin:
         Returns:
             bool: True if expires within 30 days.
         """
-        return datetime.now() + timedelta(days=30) >= self.creation_datetime + length
+        return datetime.now() + datetime.timedelta(days=30) >= self.creation_datetime + length
 {% endhighlight %}
 
 Jednoduše pak můžeme vytvořit třídu `CreditAccount` se stejnou funkcionalitou.
