@@ -278,6 +278,7 @@ Situaci vyřešíme použitím dekorátoru `functools.wraps`, který zachová id
 
 import functools
 
+
 def do_twice(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
@@ -315,6 +316,7 @@ Základní šablona dekorátoru je následující:
 {% highlight python linenos %}
 import functools
 
+
 def decorator(func):
     @functools.wraps(func)
     def wrapper_decorator(*args, **kwargs):
@@ -330,6 +332,7 @@ Jedním z příkladu je takzvaný *timing* funkce (měření doby běhu).
 {% highlight python linenos %}
 import functools
 import time
+
 
 def timer(func):
     """Print the runtime of the decorated function"""

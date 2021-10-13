@@ -32,12 +32,21 @@ credit_account_1["balance"] - 100
 
 Jako příklad si můžeme představit již dobře známý seznam. Jeden konkrétní seznam je instancí (objektem) třídy seznam, která popisuje jak seznamy vypadají a jak se s nimi dá pracovat. Třídy jsou tedy obecným předpisem, objekty pak konkrétní entity vytvořené na základě tohoto předpisu.
 
-Následující kód demonstruje vytvořeřní jednoduché (prázdné) třídy:
+Třídy je dobré umisťovat do modulů stejného názvu, pokud některé třídy dává smysl umístit společně do stejného modulu je to přijatelná alternativa.
+
+V následujícím souboru `credit_account.py` (modul `credit_account`) si definujeme základní prázdnou třídu `CreditAccount`:
 
 {% highlight python linenos %}
 # definice prázdné třídy
 class CreditAccount:
     pass
+{% endhighlight %}
+
+Následně nově vytvořenou třídu otestujeme:
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
 
 # dle předpisu třídy je následně možné vytvářet objekty
 credit_account_1 = CreditAccount()
@@ -59,6 +68,8 @@ class credit_account:
     pass
 {% endhighlight %}
 </div>
+
+### Metody a vlastnosti
 
 Vytvoření prázdné třídy neni moc praktické, pojdme definici rozšířit. Každá třída může obsahovat sadu funkcí, které jsou s třídou úzce spjaty. Těmto funkcím říkáme *metody*. Již několikrát jsme používali metodu `.split()` třídy rětězce, která umí daný řetězec rozdělit na seznam řětězců.
 
@@ -84,6 +95,12 @@ class CreditAccount:
 
         self.owner = owner
         self.balance = initial_credits
+{% endhighlight %}
+
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
 
 credit_account_1 = CreditAccount("Lukas Novak")
 credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
@@ -123,8 +140,22 @@ class CreditAccount:
             other: Target of money transfer.
             value: Amount of money to be transfered.
         """
+
         self.balance -= value
         other.balance += value
+{% endhighlight %}
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
+
+credit_account_1 = CreditAccount("Lukas Novak")
+credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
+
+credit_account_1.transfer_to(credit_account_2, 200)
+
+assert credit_account_1.balance == -200
+assert credit_account_2.balance == 400
 {% endhighlight %}
 
 Asi nás nepřekvapí, že názvy metod podléhají doporučení PEP8.
@@ -198,15 +229,20 @@ class Account:
             other: Target of money transfer.
             value: Amount of money to be transfered.
         """
+
         self.balance -= value
         other.balance += value
-
 {% endhighlight %}
 
 U definice třídy `CreditAccount` je nutné zdůraznit první řádek definice, do kulatých závorek uvádíme třídy z kterých má třída `CreditAccount` dědit.
 
+V konstruktoru třídy `CreditAccount` si všimněme použití funkce `super()`. Na technické urovni se jedná o poměrně složitou věc, nám bude stačit vysvětlení, které říká, že funkce `super()` umožňuje přístup k metodám z tříd od kterých dědíme.
+
 {% highlight python linenos %}
 from datetime import datetime
+
+from account import Account
+
 
 class CreditAccount(Account):
     """Represents a credit account."""
@@ -252,6 +288,7 @@ class Account:
             other: Target of money transfer.
             value: Amount of money to be transfered.
         """
+
         self.balance -= value
         other.balance += value
 {% endhighlight %}
@@ -270,12 +307,16 @@ class ExpirableMixin:
         Returns:
             bool: True if expires within 30 days.
         """
+
         return datetime.now() + datetime.timedelta(days=30) >= self.creation_datetime + length
 {% endhighlight %}
 
 Jednoduše pak můžeme vytvořit třídu `CreditAccount` se stejnou funkcionalitou.
 
 {% highlight python linenos %}
+from account import Account, ExpirableMixin
+
+
 class CreditAccount(Account, ExpirableMixin):
     """Represents a credit account."""
 
@@ -291,6 +332,7 @@ Ne vždy je potřeba vytvářet celou třídu pro reprezentaci jednoduchých str
 
 {% highlight python linenos %}
 from collections import namedtuple
+
 
 Person = namedtuple("Person", ["name", "phone", "email"])
 

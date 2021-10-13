@@ -326,6 +326,7 @@ V jiném skriptu umístěném v téže složce (nebo v interpretu spuštěném z
 {% highlight python linenos %}
 import list_operations
 
+
 list_operations.subtract_lists([1, 2], [4, 3])
 {% endhighlight %}
 
@@ -336,6 +337,7 @@ Každý modul má pak odpovídající **jmenný rozsah**, proto můžeme použí
 {% highlight python linenos %}
 import math
 import my_math
+
 
 math.sqrt
 my_math.sqrt
@@ -384,6 +386,7 @@ Přejmenování modulu při importu je však užitečné.
 
 {% highlight python linenos %}
 import list_operations as loperations
+
 
 loperations.subtract_lists([1, 2], [4, 3])
 {% endhighlight %}
@@ -451,6 +454,7 @@ Z takové struktury může uživatel importovat následujícím způsobem:
 {% highlight python linenos %}
 import sound.effects.echo
 
+
 # aby mohl být modul použít, musí být napsáno jeho plné jméno
 sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)
 {% endhighlight %}
@@ -460,6 +464,7 @@ Alternativně však můžeme použít následující:
 {% highlight python linenos %}
 from sound.effects import echo
 
+
 echo.echofilter(input, output, delay=0.7, atten=4)
 {% endhighlight %}
 
@@ -467,6 +472,7 @@ Posledním způsobem je potom importování samostatné funkce `echofilter`.
 
 {% highlight python linenos %}
 from sound.effects.echo import echofilter
+
 
 echofilter(input, output, delay=0.7, atten=4)
 {% endhighlight %}
