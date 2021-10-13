@@ -1,7 +1,7 @@
 ---
 layout: default
 courses: JP
-title: 4. Výjimky a dekorátory (WIP)
+title: 4. Výjimky a dekorátory
 year: 2022
 ---
 
