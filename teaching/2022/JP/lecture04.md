@@ -362,7 +362,7 @@ def timer(func):
 @timer
 def waste_some_time(num_times):
     for _ in range(num_times):
-        sum([i**2 for i in range(10000)])
+        1 + 1
 
 waste_some_time(1000) 
 {% endhighlight %}
@@ -375,7 +375,7 @@ Dekorátory je možné zanořovat, pozor, záleží na pořadí!
 @timer
 def waste_some_time(num_times):
     for _ in range(num_times):
-        sum([i**2 for i in range(10000)])
+        1 + 1
 
 
 waste_some_time(100) 
@@ -385,7 +385,7 @@ waste_some_time(100)
 @do_twice
 def waste_some_time(num_times):
     for _ in range(num_times):
-        sum([i**2 for i in range(10000)])
+        1 + 1
 
 
 waste_some_time(100) 
@@ -410,7 +410,7 @@ def repeat(num_times):
 @timer
 def waste_some_time(num_times):
     for _ in range(num_times):
-        sum([i**2 for i in range(10000)])
+        1 + 1
 
 
 waste_some_time(100) 
