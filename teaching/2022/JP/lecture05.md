@@ -175,6 +175,47 @@ class TestClass:
 {% endhighlight %}
 </div>
 
+### Vlastnosti třídy
+Zatím jsme si ukázali, že vlastnosti jsou specifické pro jednotlivé objekty, pokud zmeníme vlastnost u jednoho objektu, nezmení se u druhého. Vlastnosti definované jako vlastnosti třídy pak můžeme využívat napříč všemi instancemi dané třídy.
+
+{% highlight python linenos %}
+class CreditAccount:
+    """Account with stored credits."""
+
+    max_balance = 1000
+
+    def __init__(self, owner, initial_credits=0):
+        """Creates credit account with given owner and initial credits.
+
+        Args:
+            owner: owner of the account
+            initial_credits (optional): credit balance. Defaults to 0.
+        """
+
+        self.owner = owner
+        self.balance = initial_credits
+{% endhighlight %}
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
+
+credit_account_1 = CreditAccount("Lukas Novak")
+credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
+
+assert credit_account_1.max_balance == 1000
+assert credit_account_2.max_balance == 1000
+assert CreditAccount.max_balance == 1000
+
+CreditAccount.max_balance = 10
+
+assert credit_account_1.max_balance == 10
+assert credit_account_2.max_balance == 10
+assert CreditAccount.max_balance == 10
+{% endhighlight %}
+
+Vlastnosti třídy používejte k definovaní vlastností, které mají mít stejnou hodnoty pro všechny instance třídy. Vlastnosti instancí (objektů) používejte, pokud se mají objekt od objektu lišit.
+
 ### Přístup k vlastnostem objektu
 Narozdíl od jiných programovacích jazyků, jazyk Python přistupuje k vlastnostem objektu přímo (pomoci operátoru tečky). Programátor může modifikovat a číst libovolnou vlastnost/metodu objektu.
 
