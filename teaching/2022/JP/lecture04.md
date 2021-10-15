@@ -77,11 +77,11 @@ subtract_lists([1, 2], [4, 3])
 Existují dva přístupy k práci s výjimkami *EAFP* (it’s easier to ask for forgiveness than permission) a *LBYL* (look before you leap). Rozdíl je vidět v následujícím příkladě.
 
 {% highlight python linenos %}
-# EAFP
+# LBYL
 if "key" in dict_:
     value += dict_["key"]
 
-# LBYL
+# EAFP
 try:
     value += dict_["key"]
 except KeyError:
