@@ -116,17 +116,24 @@ def parent_function():
 
     local_x = 10
 
-    def child_function():
-        print(local_x)
+    def local_function():
         print("Child function is running.")
+        return local_x
     
-    return child_function
+    return local_function
 
-# vráceni odkazu na funkci a její zavolání
+
+# k vnitřní funkci nelze primo přistoupit
+local_function()
+
+# k vnitřní funkci se můžeme dostat
+local_function = parent_function()
+
+# a následně ji použít
+local_function()
+
+# připadně vše v jenom kroku
 parent_function()()
-
-# k vnitřní funkci nelze přistoupit
-child_function()
 {% endhighlight %}
 
 ### Jednoduchý dekorátor
