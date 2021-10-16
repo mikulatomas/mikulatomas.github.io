@@ -96,7 +96,7 @@ Funkce které vracejí funkce nebo přijímají funkce jako argument nazýváme 
 
 {% highlight python linenos %}
 # funkce vyššího řádu přijímající funkci jako argument
-def list_operation(list_, operation):
+def apply_operation(list_, operation):
     """Applies operation on the given list"""
     return operation(list_)
 
@@ -106,7 +106,7 @@ def list_sum_squared(list_):
     """Squared sum of all members of given list"""
     return sum(list_) ** 2
 
-list_operation([1,2,3], list_sum_squared)
+apply_operation([1, 2, 3], list_sum_squared)
 {% endhighlight %}
 
 {% highlight python linenos %}
