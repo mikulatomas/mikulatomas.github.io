@@ -393,8 +393,8 @@ assert owner.name == owner[0]
 owner.name = "Pepa Novak"
 {% endhighlight %}
 
-<!-- ## Úkoly
+## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
 
 * **L05E01**: Read points (NamedTuple) [[Náhled](https://github.com/kmi-jp/template-L05E01)], [[Příjmout úkol](https://classroom.github.com/a/5QzUNI1k)]
-* **L05E02**: Data [[Náhled](https://github.com/kmi-jp/template-L05E02)], [[Příjmout úkol](https://classroom.github.com/a/7xE7Iezm)] -->
+* **L05E02**: Data [[Náhled](https://github.com/kmi-jp/template-L05E02)], [[Příjmout úkol](https://classroom.github.com/a/7xE7Iezm)]
