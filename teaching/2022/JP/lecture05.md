@@ -18,8 +18,8 @@ Sahat po vytváření vlastní datové struktury bychom měli pouze v případě
 Více informací [zde](https://docs.python.org/3/tutorial/classes.html) a [zde](https://realpython.com/python3-object-oriented-programming/).
 
 {% highlight python linenos %}
-credit_account_1 = {"owner": "Lukas Novak", "balance":100000}
-credit_account_2 = {"owner": "Pepa Novak", "balance":10000}
+credit_account_1 = {"owner": "Lukas Novak", "balance": 100000}
+credit_account_2 = {"owner": "Pepa Novak", "balance": 10000}
 
 # součet kreditů na dvou účtech
 credit_account_1["balance"] +  credit_account_2["balance"]
@@ -54,6 +54,9 @@ credit_account_2 = CreditAccount()
 
 # ověření typu
 type(credit_account_1)
+
+# test zda je objekt instancí třídy
+assert isinstance(credit_account_1, CreditAccount)
 {% endhighlight %}
 
 <div class="pep">
@@ -300,7 +303,7 @@ class CreditAccount(Account):
         return datetime.now() + datetime.timedelta(days=30) >= self.expiration
 {% endhighlight %}
 
-### Mixins
+<!-- ### Mixins
 Používání takzvaných *mixinů* je populární způsob využití vícenásobné dědičnosti. Již jsme zmínili, že do závorek na prvním řádku definice třídy je možné uvádět několik tříd z kterých bude třída dědit funkcionalitu.
 
 Mějme tedy situaci, kdy definujeme třídu `Account`.
@@ -366,7 +369,7 @@ class CreditAccount(Account, ExpirableMixin):
 
 Hlavní síla mixinů je v jejich modulárnosti a přehlednosti. V kontextu vícenásobné dědičnosti se v ostatních předmětech setkáte s *diamantovým problémem*.
 
-V jazyce Python se priority v dědičnosti určují pořadím tříd uvedených v závorkách. Pokud by tedy nastal problém, že obě třídy od kterých naše třída dědí implementují metodu se stejným názvem, bude použita ta metoda jejíž třída je uvedena jako první.
+V jazyce Python se priority v dědičnosti určují pořadím tříd uvedených v závorkách. Pokud by tedy nastal problém, že obě třídy od kterých naše třída dědí implementují metodu se stejným názvem, bude použita ta metoda jejíž třída je uvedena jako první. -->
 
 ## `NamedTuple`
 Ne vždy je potřeba vytvářet celou třídu pro reprezentaci jednoduchých strukturovaných dat. Jestliže potřebujeme funkcionalitu `tuple` s pojmenovaním jednotlivých uložených hodnot, můžeme použít `collections.NamedTuple`.
@@ -393,7 +396,5 @@ owner.name = "Pepa Novak"
 <!-- ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
 
-* **L01E01**: Hello world [[Náhled](https://github.com/kmi-jp/template-L01E01)], [[Příjmout úkol](https://classroom.github.com/a/BLVFlAR8)]
-* **L01E02**: Integer input [[Náhled](https://github.com/kmi-jp/template-L01E02)], [[Příjmout úkol]()]
-* **L01E03**: Point input [[Náhled](https://github.com/kmi-jp/template-L01E03)], [[Příjmout úkol]()]
-* **L01E04PEP**: PEP8 format [[Náhled](https://github.com/kmi-jp/template-L01E04PEP)], [[Příjmout úkol]()] -->
+* **L05E01**: Read points (NamedTuple) [[Náhled](https://github.com/kmi-jp/template-L05E01)], [[Příjmout úkol](https://classroom.github.com/a/5QzUNI1k)]
+* **L05E02**: Data [[Náhled](https://github.com/kmi-jp/template-L05E02)], [[Příjmout úkol](https://classroom.github.com/a/7xE7Iezm)] -->
