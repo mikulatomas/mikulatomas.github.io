@@ -23,6 +23,14 @@ pre {
     border-radius: 10px;
 }
 
+p, h1, h2, h3, h4 {
+    code {
+        background-color: #E9E9E9;
+        padding: .3em;
+        border-radius: 5px;
+    }
+}
+
 .pep {
     .rouge-table {
         // border-width: 2px;
@@ -144,7 +152,7 @@ ul {
         border-left-style: solid;
         border-left-color: #E9E9E9;
         padding-left: 0.8em;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.3em;
     }
 }
 
