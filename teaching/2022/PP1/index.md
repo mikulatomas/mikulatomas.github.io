@@ -9,8 +9,7 @@ year: 2022
 ---
 
 ## {{ page.title }}
-**Vyučující:** {{ page.lector }}
-
+**Vyučující:** {{ page.lector }}\\
 **Stránky předmětu:** [{{ page.course_page }}]({{ page.course_page }})
 
 ## Úkoly na programování
