@@ -32,7 +32,7 @@ credit_account_1["balance"] - 100
 
 Jako příklad si můžeme představit již dobře známý seznam. Jeden konkrétní seznam je instancí (objektem) třídy seznam, která popisuje jak seznamy vypadají a fungují. Třídy jsou tedy obecným předpisem, objekty pak konkrétní entity vytvořené na základě tohoto předpisu.
 
-Třídy je dobré umisťovat do modulů stejného názvu, pokud některé třídy dává smysl umístit společně do stejného modulu je to přijatelná alternativa.
+Třídy je dobré umisťovat do modulů stejného názvu.
 
 V následujícím souboru `credit_account.py` (modul `credit_account`) si definujeme základní prázdnou třídu `CreditAccount`:
 
