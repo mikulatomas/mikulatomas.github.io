@@ -74,13 +74,13 @@ class credit_account:
 
 ### Metody a vlastnosti
 
-Vytvoření prázdné třídy neni moc praktické, pojdme definici rozšířit. Každá třída může obsahovat sadu funkcí, které jsou s třídou úzce spjaty. Těmto funkcím říkáme *metody*. Již několikrát jsme používali metodu `.split()` třídy řetězce, která umí daný řetězec rozdělit na seznam řetězců.
+Vytvoření prázdné třídy neni moc praktické, pojdme definici rozšířit. Každá třída může obsahovat sadu funkcí které jsou s třídou úzce spjaty. Těmto funkcím říkáme *metody*. Již několikrát jsme používali metodu `.split()` třídy řetězce, která umí daný řetězec rozdělit na seznam řetězců.
 
 Všimněme si, že třída a její metody používají podobnou konvenci docstringů, budeme je tedy používat (a vyžadovat) i zde.
 
-Nejdůležitější metodou každé třídy je *konstruktor* `.__init__()` , zatím se nemusíme trápit z jakého důvodu název obsahuje podtržítka (to si vysvětlíme další seminář). Konstruktor nastaví počáteční stav (initial state - proto název init) nově vytvořeného objektu.
+Nejdůležitější metodou každé třídy je *konstruktor* `.__init__()` , zatím se nemusíme trápit z jakého důvodu název obsahuje podtržítka (to si vysvětlíme na dalším semináři). Hlavním úkolem konstruktoru je nastavit počáteční stav (initial state - proto název init) nově vytvořeného objektu.
 
-Metoda `.__init__()` může obsahovat libovolný počet parametrů (podobně jako funkce), prvním parametrem však vždy musí být parametr `self`. Když je instance třídy vytvořena, je automaticky předána jako první parametr `self` metodě `.__init__()`. To je důležité pro nastavení počátečního stavu objektu (potřebujeme přístup k nově vytvořenému objektu aby jsme mohli počáteční stav nastavit).
+Metoda `.__init__()` může obsahovat libovolný počet parametrů (podobně jako funkce), prvním parametrem však vždy musí být parametr `self`. Když je instance třídy vytvořena, je automaticky předána jako první parametr `self` metodě `.__init__()`. To je nutné pro nastavení počátečního stavu objektu (potřebujeme přístup k nově vytvořenému objektu aby jsme mohli počáteční stav nastavit).
 
 {% highlight python linenos %}
 class CreditAccount:
@@ -117,9 +117,9 @@ credit_account_1.balance += 300
 assert credit_account_1.balance == 300
 {% endhighlight %}
 
-Vytvořili jsme tedy třídu `CreditAccount`, která při vytvoření nové instance nastaví dvě vlastnosti `.owner` a `.balance` na hodnoty `owner` a `initial_credits`. Každá instance třídy `CreditAccount` bude těmito vlastnosti disponovat.
+Vytvořili jsme tedy třídu `CreditAccount`, která při vytvoření nové instance nastaví dvě vlastnosti `CreditAccount.owner` a `CreditAccount.balance` na hodnoty `owner` a `initial_credits`. Každá instance třídy `CreditAccount` bude těmito vlastnosti disponovat.
 
-Další metodou, kterou můžeme naši třídě `CreditAccount` přidat je metoda `.transfer_to(self, other, value)`.
+Další metodou, kterou můžeme naši třídě `CreditAccount` přidat je metoda `CreditAccount.transfer_to(self, other, value)`.
 
 {% highlight python linenos %}
 class CreditAccount:
@@ -179,7 +179,7 @@ class TestClass:
 </div>
 
 ### Vlastnosti třídy
-Zatím jsme si ukázali, že vlastnosti jsou specifické pro jednotlivé objekty, pokud zmeníme vlastnost u jednoho objektu, nezmení se u druhého. Vlastnosti definované jako vlastnosti třídy pak můžeme využívat napříč všemi instancemi dané třídy.
+Zatím jsme si ukázali, že vlastnosti jsou specifické pro jednotlivé objekty. Pokud zmeníme vlastnost u jednoho objektu, nezmení se u druhého. Vlastnosti definované jako vlastnosti třídy, můžeme využívat napříč všemi instancemi třídy.
 
 {% highlight python linenos %}
 class CreditAccount:
@@ -226,7 +226,7 @@ Narozdíl od jiných programovacích jazyků, jazyk Python přistupuje k vlastno
 
 Pozor, s tímto faktem přichází velká zodpovědnost, programátor si musí sám uvědomit, jaké zásahy do objektů jsou validní a jaké mohou vést k problémům.
 
-Existuje však způsob, kterým lze komunikovat, že uživatel přistupuje k vlastnosti/metodě, která není zamýšlena jako veřejná (je používaná například pouze interně v rámci objektu).
+Existuje však způsob, kterým lze komunikovat, že uživatel přistupuje k vlastnosti/metodě, která není zamýšlena jako veřejná (je používaná například pouze interně v rámci objektu). Toho hojně využíváme v případě, že jsou naše metody komplikované a je nutné je rozdělit na několik dílčích metod (které však nejsou zamýšleny pro samotného uživatele).
 
 <div class="pep">
 {% highlight python linenos %}
