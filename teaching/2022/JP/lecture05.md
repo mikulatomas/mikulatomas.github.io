@@ -28,7 +28,7 @@ credit_account_1["balance"] +  credit_account_2["balance"]
 credit_account_1["balance"] - 100
 {% endhighlight %}
 
-*Třída* (klíčové slovo `Class`) tedy slouží k vytváření uživatelsky definovaných datových struktur. Určují tedy jak má výsledná datová struktura vypadat a fungovat. Na základě třídy (předpis) můžeme vytvářet jednotlivé instance třídy (objekty).
+*Třída* (příkaz `class`) tedy slouží k vytváření uživatelsky definovaných datových struktur. Určují tedy jak má výsledná datová struktura vypadat a fungovat. Na základě třídy (předpis) můžeme vytvářet jednotlivé instance třídy (objekty).
 
 Jako příklad si můžeme představit již dobře známý seznam. Jeden konkrétní seznam je instancí (objektem) třídy seznam, která popisuje jak seznamy vypadají a jak se s nimi dá pracovat. Třídy jsou tedy obecným předpisem, objekty pak konkrétní entity vytvořené na základě tohoto předpisu.
 
