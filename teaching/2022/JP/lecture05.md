@@ -30,7 +30,7 @@ credit_account_1["balance"] - 100
 
 *Třída* (příkaz `class`) tedy slouží k vytváření uživatelsky definovaných datových struktur. Určují jak má výsledná datová struktura vypadat a fungovat. Na základě třídy (předpis) můžeme vytvářet jednotlivé instance třídy (objekty).
 
-Jako příklad si můžeme představit již dobře známý seznam. Jeden konkrétní seznam je instancí (objektem) třídy seznam, která popisuje jak seznamy vypadají a jak se s nimi dá pracovat. Třídy jsou tedy obecným předpisem, objekty pak konkrétní entity vytvořené na základě tohoto předpisu.
+Jako příklad si můžeme představit již dobře známý seznam. Jeden konkrétní seznam je instancí (objektem) třídy seznam, která popisuje jak seznamy vypadají a fungují. Třídy jsou tedy obecným předpisem, objekty pak konkrétní entity vytvořené na základě tohoto předpisu.
 
 Třídy je dobré umisťovat do modulů stejného názvu, pokud některé třídy dává smysl umístit společně do stejného modulu je to přijatelná alternativa.
 
