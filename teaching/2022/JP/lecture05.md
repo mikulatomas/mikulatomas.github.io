@@ -1,7 +1,7 @@
 ---
 layout: default
 courses: JP
-title: 5. Objektově orientované programování (OOP) (WIP)
+title: 5. Objektově orientované programování (OOP)
 year: 2022
 ---
 
