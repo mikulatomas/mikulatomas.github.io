@@ -249,7 +249,7 @@ class TestClass:
 ## Dědičnost
 Koncept dědičnosti je jeden z hlavních konceptů objektově orientovaného programování. Ve zkratce si nyní ukážeme, jak může jedna třída dědit funkcionalitu od jiné.
 
-Vraťme se k předchozímu příkladu. Představme si, že mimo `CreditAccount` můžeme mít například i `BankAccount`. Asi si umíme představit, že některá funkcionalita může být sdílená. Z toho důvodu se nabízí realizovat obecnou třídu `Account` od které pak bude dědit třída `CreditAccount`.
+Vraťme se k předchozímu příkladu. Představme si, že mimo `CreditAccount` můžeme mít například i `BankAccount`. Asi si umíme představit, že tyto třídy mohou sdílet učitou funkcionalitu a je tedy zbytečné ji implementovat vícekrát. Z toho důvodu se nabízí realizovat obecnou třídu `Account`, od které bude dědit třída `CreditAccount`.
 
 {% highlight python linenos %}
 class Account:
@@ -278,7 +278,7 @@ class Account:
         other.balance += value
 {% endhighlight %}
 
-U definice třídy `CreditAccount` je nutné zdůraznit první řádek definice, do kulatých závorek uvádíme třídy z kterých má třída `CreditAccount` dědit.
+U definice třídy `CreditAccount` je nutné zdůraznit první řádek definice, do kulatých závorek uvádíme třídy (oddělené čárkou) z kterých má třída `CreditAccount` dědit.
 
 V konstruktoru třídy `CreditAccount` si všimněme použití funkce `super()`. Na technické úrovni se jedná o poměrně složitou věc, nám bude stačit vysvětlení, které říká, že funkce `super()` umožňuje přístup k metodám z tříd od kterých dědíme.
 
@@ -372,7 +372,7 @@ Hlavní síla mixinů je v jejich modulárnosti a přehlednosti. V kontextu víc
 V jazyce Python se priority v dědičnosti určují pořadím tříd uvedených v závorkách. Pokud by tedy nastal problém, že obě třídy od kterých naše třída dědí implementují metodu se stejným názvem, bude použita ta metoda jejíž třída je uvedena jako první. -->
 
 ## `NamedTuple`
-Ne vždy je potřeba vytvářet celou třídu pro reprezentaci jednoduchých strukturovaných dat. Jestliže potřebujeme funkcionalitu `tuple` s pojmenovaním jednotlivých uložených hodnot, můžeme použít `collections.NamedTuple`.
+Ne vždy je potřeba vytvářet celou třídu, takovým případem je reprezentace jednoduchých strukturovaných dat. Jestliže potřebujeme funkcionalitu `tuple` s pojmenovaním jednotlivých uložených hodnot, můžeme použít `collections.NamedTuple`.
 
 {% highlight python linenos %}
 from collections import namedtuple
