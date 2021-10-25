@@ -139,7 +139,7 @@ class CreditAccount:
         return int(self.balance)
     
     def __lt__(self, other):
-        if type(other) == CreditAccount:
+        if isinstance(other, CreditAccount):
             return self.balance < other.balance
 
         return NotImplemented
@@ -196,13 +196,13 @@ class CreditAccount:
         return int(self.balance)
     
     def __lt__(self, other):
-        if type(other) == CreditAccount:
+        if isinstance(other, CreditAccount):
             return self.balance < other.balance
 
         return NotImplemented
     
     def __add__(self, other):
-        if type(other) == CreditAccount:
+        if isinstance(other, CreditAccount):
             return self.balance + other.balance
 
         return NotImplemented
@@ -271,19 +271,19 @@ class CreditAccount:
         return int(self.balance)
     
     def __lt__(self, other):
-        if type(other) == CreditAccount:
+        if isinstance(other, CreditAccount):
             return self.balance < other.balance
 
         return NotImplemented
     
     def __add__(self, other):
-        if type(other) == CreditAccount:
+        if isinstance(other, CreditAccount):
             return self.balance + other.balance
 
         return NotImplemented
     
     def __iadd__(self, value):
-        if type(value) == int:
+        if isinstance(value, int):
             self.balance += value
             return self
         
@@ -353,26 +353,26 @@ class CreditAccount:
         return int(self.balance)
     
     def __lt__(self, other):
-        if type(other) == CreditAccount:
+        if isinstance(other, CreditAccount):
             return self.balance < other.balance
 
         return NotImplemented
     
     def __add__(self, other):
-        if type(other) == CreditAccount:
+        if isinstance(other, CreditAccount):
             return self.balance + other.balance
 
         return NotImplemented
     
     def __iadd__(self, value):
-        if type(value) == int:
+        if isinstance(value, int):
             self.balance += value
             return self
         
         return NotImplemented
     
     def __isub__(self, value):
-        if type(value) == int:
+        if isinstance(value, int):
             self.balance -= value
             return self
         
