@@ -605,10 +605,8 @@ def __init__(self, owner: str, balance: int = 0):
 
 Dekorátor `@dataclass` je mnohem komplexnější, celkový popis je možné nalézt [zde](https://docs.python.org/3/library/dataclasses.html). Pravděpodobně nás zaskočilo, že uvádíme datový typ u jednotlivých vlastností. Jedná se o nápovědu typování, o této možnosti v jazyku Python si řekneme v budoucnu. -->
 
-<!-- ## Úkoly
+## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
 
-* **L01E01**: Hello world [[Náhled](https://github.com/kmi-jp/template-L01E01)], [[Příjmout úkol](https://classroom.github.com/a/BLVFlAR8)]
-* **L01E02**: Integer input [[Náhled](https://github.com/kmi-jp/template-L01E02)], [[Příjmout úkol]()]
-* **L01E03**: Point input [[Náhled](https://github.com/kmi-jp/template-L01E03)], [[Příjmout úkol]()]
-* **L01E04PEP**: PEP8 format [[Náhled](https://github.com/kmi-jp/template-L01E04PEP)], [[Příjmout úkol]()] -->
+* **L06E01**: Credit Account [[Náhled](https://github.com/kmi-jp/template-L06E01)], [[Příjmout úkol](https://classroom.github.com/a/7yPRTFK1)]
+* **L06E02**: Data 2 [[Náhled](https://github.com/kmi-jp/template-L06E02)], [[Příjmout úkol](https://classroom.github.com/a/1-44QRk0)]
