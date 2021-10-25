@@ -1,7 +1,7 @@
 ---
 layout: default
 courses: JP
-title: 6. Dunder metody a dekorátory tříd (WIP)
+title: 6. Dunder metody a dekorátory tříd
 year: 2022
 ---
 
