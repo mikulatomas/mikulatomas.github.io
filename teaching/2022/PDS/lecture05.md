@@ -27,4 +27,4 @@ with cv:
     cv.notify()
 {% endhighlight %}
 
-{% include task.html content="Naprogramujte úlohu producent a konzument - synchronizace pomoci monitoru (<a href='https://classroom.github.com/a/79WjCccu'>Příjmout úkol</a>)." %}
+{% include task.html content="Naprogramujte úlohu producent a konzument (omezený buffer) - synchronizace pomoci monitoru (<a href='https://classroom.github.com/a/79WjCccu'>Příjmout úkol</a>)." %}
