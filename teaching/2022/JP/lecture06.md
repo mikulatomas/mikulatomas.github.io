@@ -605,6 +605,22 @@ def __init__(self, owner: str, balance: int = 0):
 
 Dekorátor `@dataclass` je mnohem komplexnější, celkový popis je možné nalézt [zde](https://docs.python.org/3/library/dataclasses.html). Pravděpodobně nás zaskočilo, že uvádíme datový typ u jednotlivých vlastností. Jedná se o nápovědu typování, o této možnosti v jazyku Python si řekneme v budoucnu. -->
 
+## Pořadí definic metod
+Neexistuje žádný jeden správný způsob v jakém pořadí metody třídy definovat. Populární možnost je následující:
+
+{% highlight python linenos %}
+class MyClass:
+    # Dunder metohods
+    
+    # @staticmethod a @classmethod
+
+    # @property
+
+    # _private_method(self)
+
+    # public_method(self)
+{% endhighlight %}
+
 ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
 
