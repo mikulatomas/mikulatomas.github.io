@@ -29,4 +29,4 @@ year: 2022
 Praktická implementace vybraných problémů v jazyce Python 3.
 
 ### Zápočet
-Vypracování zadaných úkolů, podrobnosti budou doplněny během semestru.
+Vypracování tří úloh z části paralelního programování a dvou úloh z části distribuované systémy.
