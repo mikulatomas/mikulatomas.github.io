@@ -1,7 +1,7 @@
 ---
 layout: default
 courses: JP
-title: 7. Iterátory a comprehension (WIP)
+title: 7. Iterátory a comprehension
 year: 2022
 ---
 
@@ -518,11 +518,8 @@ next(iterator)
 {% endhighlight %}
 
 
-<!-- ## Úkoly
+## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
 
-* **L01E01**: Hello world [[Náhled](https://github.com/kmi-jp/template-L01E01)], [[Příjmout úkol](https://classroom.github.com/a/BLVFlAR8)]
-* **L01E02**: Integer input [[Náhled](https://github.com/kmi-jp/template-L01E02)], [[Příjmout úkol]()]
-* **L01E03**: Point input [[Náhled](https://github.com/kmi-jp/template-L01E03)], [[Příjmout úkol]()]
-* **L01E04PEP**: PEP8 format [[Náhled](https://github.com/kmi-jp/template-L01E04PEP)], [[Příjmout úkol]()] -->
-
+* **L07E01**: Generator function [[Náhled](https://github.com/kmi-jp/template-L07E01)], [[Příjmout úkol](https://classroom.github.com/a/H24-_heG)]
+* **L07E02**: Data 3 [[Náhled](https://github.com/kmi-jp/template-L07E02)], [[Příjmout úkol](https://classroom.github.com/a/r97TpK58)]
