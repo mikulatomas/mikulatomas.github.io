@@ -355,6 +355,16 @@ next(generator)
 next(generator)
 {% endhighlight %}
 
+### Příkaz `yield from`
+Ve verzi 3.3 byl přidán příkaz `yield from`na delegování generátoru. Pokud máme nějaký generátor a chceme z něj vytvořit další generátor je možné napsat funkci:
+
+{% highlight python linenos %}
+def my_gen(gen):
+    yield from gen
+{% endhighlight %}
+
+Příkaz `yield from` je rovněž elegantním způsobem na vytvoření generátoru (iterátoru) z uložené sekvence.
+
 ## Sekvence vs Iterátory
 Nyní se podíváme na vytvoření vlastní sekvence pomoci implementování dunder metod `__len__` a `__getitem__`.
 
