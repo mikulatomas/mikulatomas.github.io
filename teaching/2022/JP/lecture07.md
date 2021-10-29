@@ -461,8 +461,7 @@ class Sentence:
         return f"Sentence({self.text})"
     
     def __iter__(self):
-        for word in self.words:
-            yield word
+        yield from self.words
         
 sentence = Sentence("Ahoj svete jak se mas")
 
@@ -508,8 +507,7 @@ class Sentence:
         return f"Sentence({self.text})"
     
     def __iter__(self):
-        for word in split_generator(self.text):
-            yield word
+        yield from split_generator(self.text):
         
         # zde je rovněž možné použít generator expression
         # return (word for word in split_generator(self.text))
