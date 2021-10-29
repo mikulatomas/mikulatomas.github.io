@@ -365,6 +365,15 @@ def my_gen(gen):
 
 Příkaz `yield from` je rovněž elegantním způsobem na vytvoření generátoru (iterátoru) z uložené sekvence.
 
+{% highlight python linenos %}
+def g(x):
+    yield from range(x, 0, -1)
+    yield from range(x)
+
+list(g(5))
+# vysledek: [5, 4, 3, 2, 1, 0, 1, 2, 3, 4]
+{% endhighlight %}
+
 ## Sekvence vs Iterátory
 Nyní se podíváme na vytvoření vlastní sekvence pomoci implementování dunder metod `__len__` a `__getitem__`.
 
