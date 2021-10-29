@@ -33,7 +33,12 @@ class CreditAccount:
     
     def __str__(self):
         return self.__repr__()
-    
+{% endhighlight %}
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
+
 credit_account_1 = CreditAccount("Lukas Novak")
 credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
 
@@ -80,7 +85,12 @@ class CreditAccount:
     
     def __int__(self):
         return int(self.balance)
-    
+{% endhighlight %}
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
+
 credit_account_1 = CreditAccount("Lukas Novak")
 credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
 
@@ -143,8 +153,12 @@ class CreditAccount:
             return self.balance < other.balance
 
         return NotImplemented
+{% endhighlight %}
 
-    
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
+
 credit_account_1 = CreditAccount("Lukas Novak")
 credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
 
@@ -206,8 +220,12 @@ class CreditAccount:
             return self.balance + other.balance
 
         return NotImplemented
+{% endhighlight %}
 
-    
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
+
 credit_account_1 = CreditAccount("Lukas Novak")
 credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
 
@@ -288,8 +306,12 @@ class CreditAccount:
             return self
         
         return NotImplemented
+{% endhighlight %}
 
-    
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
+
 credit_account_1 = CreditAccount("Lukas Novak")
 credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
 
@@ -387,6 +409,10 @@ class CreditAccount:
         """
         self -= value
         other += value
+{% endhighlight %}
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
 
 
 credit_account_1 = CreditAccount("Lukas Novak")
@@ -422,6 +448,11 @@ class CreditAccount:
 
         self.owner = owner
         self.balance = initial_credits
+{% endhighlight %}
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
 
 credit_account = CreditAccount("Lukas Novak")
 
@@ -453,6 +484,11 @@ class CreditAccount:
             raise ValueError("Balance cannot be negative number!")
 
         self.balance = new_balance
+{% endhighlight %}
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
 
 credit_account = CreditAccount("Lukas Novak", 0)
 
@@ -498,6 +534,11 @@ class CreditAccount:
     @balance.deleter
     def balance(self):
         self._balance = 0
+{% endhighlight %}
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
 
 credit_account = CreditAccount("Lukas Novak", 0)
 
@@ -537,6 +578,11 @@ class CreditAccount:
         owner, initial_credits = input_string.split(separator)
 
         return cls(owner, int(initial_credits))
+{% endhighlight %}
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
 
 credit_account = CreditAccount.from_csv("Lukas Novak,200")
 
@@ -572,10 +618,14 @@ class CreditAccount:
         Returns: money value
         """
         return credit * exchange_rate
+{% endhighlight %}
+
+{% highlight python linenos %}
+from credit_account import CreditAccount
+
 
 # dostupné z třídy
 CreditAccount.credit_to_money(100, 20)
-
 credit_account = CreditAccount("Lukas Novak", 200)
 
 # dostupné rovněž z objektu
