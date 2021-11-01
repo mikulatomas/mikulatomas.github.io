@@ -26,6 +26,9 @@ V případě, že si nevíte rady, zvažte konzultaci (domluva e-mailem). Pokud 
 ### Odevzdání do 8.11.2021
 * **Lekce 5**: 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12
 
+### Odevzdání do 15.11.2021
+* **Lekce 6**: 1, 2, 3, 4, 5, 6, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20
+
 ## Showcase
 Stránka s obrázky vytvořených za pomoci želvý grafiky v jazyku Lisp je dostupná [zde](/teaching/showcase).
 
