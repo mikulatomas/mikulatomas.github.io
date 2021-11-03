@@ -407,8 +407,9 @@ with path.open(mode="r") as file:
 assert data == input_data
 {% endhighlight %}
 
-<!-- ## Úkoly
+## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
 
-* **L07E01**: Generator function [[Náhled](https://github.com/kmi-jp/template-L07E01)], [[Příjmout úkol](https://classroom.github.com/a/H24-_heG)]
-* **L07E02**: Data 3 [[Náhled](https://github.com/kmi-jp/template-L07E02)], [[Příjmout úkol](https://classroom.github.com/a/r97TpK58)] -->
+* **L08E01**: CSV sum script [[Náhled](https://github.com/kmi-jp/template-L08E01)], [[Příjmout úkol](https://classroom.github.com/a/mUSy7NSV)]
+* **L08E02**: Data 4 [[Náhled](https://github.com/kmi-jp/template-L08E02)], [[Příjmout úkol](https://classroom.github.com/a/CrZEufa0)]
+* **L08E03**: Exercise points analysis [[Náhled](https://github.com/kmi-jp/template-L08E03)], [[Příjmout úkol](https://classroom.github.com/a/ojoZSzQN)]
