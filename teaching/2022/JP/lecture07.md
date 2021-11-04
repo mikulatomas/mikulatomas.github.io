@@ -82,16 +82,6 @@ Comprehension spolu s cykly jsou nejčastější případy použití iteračníh
 Pokud budeme chtít umocnit seznam čísel, můžeme napsat klasický `for` cyklus.
 
 {% highlight python linenos %}
-list(enumerate(range(5)))
-
-iterator = iter(enumerate(range(5)))
-
-next(iterator)
-{% endhighlight %}
-
-Funkce `zip()`, `enumerate()`, `filter()` vrací iterable a rovněž iterable přijímají, lze je tedy zanořovat.
-
-{% highlight python linenos %}
 squares = []
 
 for number in numbers:
