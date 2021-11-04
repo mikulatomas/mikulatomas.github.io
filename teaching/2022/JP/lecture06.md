@@ -44,7 +44,7 @@ credit_account_2 = CreditAccount("Pepa Novak", initial_credits=200)
 
 credit_account_1
 print(credit_account_1)
-repr(credit_acount_1)
+repr(credit_account_1)
 {% endhighlight %}
 
 #### Převod na jiné datové typy
