@@ -100,7 +100,7 @@ Obecně platí předpis:
 new_list = [expression for member in iterable]
 {% endhighlight %}
 
-Výsledkem list comprehension je vždy nový seznam. Je dobré je používat pouze pokud chceme vytvořit nový seznam výsledků. Dále pak platí, že pokud je list comprehension delší než dva řádky, je vhodnější (čitelnější) použít klasický `for` cyklus.
+Výsledkem list comprehension je vždy nový seznam. Comprehension je tedy dobré používat pouze pokud chceme vytvořit nový seznam hodnot. Dále pak platí, že pokud je list comprehension delší než dva řádky, je vhodnější (čitelnější) použít klasický `for` cyklus.
 
 {% highlight python linenos %}
 squares_minus = [number ** 2 for number in [number - 5 for number in numbers]]
@@ -108,7 +108,7 @@ squares_minus = [number ** 2 for number in [number - 5 for number in numbers]]
 
 ### Podmínky v list comprehension
 #### Filtrování
-Podmínky v list comprehension můžeme použít k filtrování. Nejprve se podíváme jak bychom napsali řešení klasicky:
+Jeden ze způsobů použití podmínek v comprehension je filtrování. Nejprve se podíváme jak bychom napsali řešení klasicky:
 
 {% highlight python linenos %}
 sentence = 'the rocket came back from mars'
@@ -133,7 +133,7 @@ new_list = [expression for member in iterable (if conditional)]
 {% endhighlight %}
 
 #### Úprava prvků
-Dále lze podmínky použít k změně hodnot v seznamu dle podmínky. Nejprve klasické řešení:
+Dále lze podmínky použít ke změně hodnot v seznamu. Nejprve klasické řešení:
 
 {% highlight python linenos %}
 numbers = [10, 20, -5, 10]
@@ -161,7 +161,7 @@ new_list = [expression (if conditional) for member in iterable]
 {% endhighlight %}
 
 ### Zanořování list comprehension
-List comprehension můžeme zanořovat, situaci demonstrujeme výpočtem kartézského součinu, nejprve klasickým způsobem:
+List comprehension můžeme zanořovat, situaci demonstrujeme výpočtem kartézského součinu. Nejprve klasickým způsobem:
 
 {% highlight python linenos %}
 colors = ['red', 'green', 'blue']
@@ -235,7 +235,7 @@ Ve většině případů comprehensions přinesou znatelné zrychlení (často a
 Především pro případy, kdy iterujeme přes velká data, je vždy lepší použít comprehension, pozor však na čitelnost kódu.
 
 ## Generátorové funkce a výrazy
-V dnešních verzích jazyka Python je prokrastinace využívána mnohem častěji než dříve, rovněž poskytované nástroje jsou propracovanější. Namísto produkování celého výsledku předtím než je k němu přistoupeno, jsou jednotlivé prvky (například prvky seznamu) produkovány v čase k jejich přístupu.
+V novějších verzích jazyka Python je "prokrastinace" využívána mnohem častěji než dříve. Rovněž poskytují propracovanější nástroje pro jeho podporu. Jak se odložený výpočet projevuje? Namísto produkování celého výsledku najednou, jsou jednotlivé prvky (například prvky seznamu) produkovány v čase přístupu.
 
 {% highlight python linenos %}
 big_data = range(100000000000000)
@@ -258,11 +258,11 @@ big_zip[100000]
 {% endhighlight %}
 
 ### Generátorové funkce
-Narozdíl od normálních funkcí, které skončí výpočet a vrátí hodnotu (pomoci příkazu `return`), generátorové funkce automaticky uspávají a probouzejí jejich vykonávání a stav po každém vrácení výsledku (pomoci příkazu `yield`). V rámci stavu jsou uloženy například lokální proměnné, proto je možné je zachovat napříč výpočtem.
+Narozdíl od normálních funkcí, které skončí výpočet a vrátí hodnotu (pomoci příkazu `return`), generátorové funkce automaticky uspávají a probouzejí jejich vykonávání (pomoci příkazu `yield`).
 
-Generátorové funkce jsou úzce spojené s iteračním protokolem. Aby bylo možné iterační protokol používat jsou funkce obsahující `yield` kompilovány jako generátory. Nejedná se tedy o klasické funkce, jejich architektura zaručuje aby vracely objekt podporující iterační protokol. Později, jakmile je zavoláme, vrací generátor objekt, který podporuje iteration rozhraní (automaticky vytvoří metodu `__next__`).
+Generátorové funkce jsou úzce spojené s iteračním protokolem. Aby bylo možné iterační protokol používat, jsou funkce obsahující `yield` kompilovány jako generátory. Nejedná se tedy o klasické funkce. Jejich architektura zaručuje, aby vracely objekt podporující iterační protokol. Později, při volání, vrací generátorový objekt, který podporuje iterační rozhraní (automaticky vytvoří metodu `__next__`).
 
-V rámci generátorové funkce můžeme použít rovněž i příkaz `return`, ten pak slouží na předčasné ukončení výpočtu (interne pomoci `StopIteration`).
+V rámci generátorové funkce můžeme použít rovněž příkaz `return`, ten pak slouží na předčasné ukončení výpočtu (interně pomoci `StopIteration`).
 
 {% highlight python linenos %}
 # klasická funkce
@@ -282,7 +282,7 @@ def generate_squares(n):
 %timeit generate_squares(20000)
 {% endhighlight %}
 
-Generátorové funkce je nejvhodnější používat tehdy když nevíme, zda budeme potřebovat celý výsledek nebo pouze jeho část.
+Generátorové funkce je nejvhodnější používat tehdy, když nevíme, zda budeme potřebovat celý výsledek nebo pouze jeho část.
 
 {% highlight python linenos %}
 # v rámci for loopu
@@ -299,7 +299,7 @@ next(generator)
 next(generator)
 {% endhighlight %}
 
-Generátory jsou *single-iteration* objekty. To znamená, že je možné je proiterovat pouze jednou. Pokud se chceme k výsledkům vracet, je nutné je ukládat.
+Generátory jsou *single-iteration* objekty. To znamená, že je přes ně možné iterovat pouze jedenkrát. Pokud se chceme k výsledkům vracet, je nutné je ukládat.
 
 {% highlight python linenos %}
 generator = generate_squares(20)
