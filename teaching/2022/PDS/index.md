@@ -29,4 +29,4 @@ year: 2022
 Praktická implementace vybraných problémů v jazyce Python 3.
 
 ### Zápočet
-Vypracování tří úloh z části paralelního programování a dvou úloh z části distribuované systémy.
+Vypracování tří úloh z části paralelního programování a dvou úloh z části distribuované systémy. Přehled uznaných úkolů je dostupný [zde](https://docs.google.com/spreadsheets/d/1-kvij8RxNySA3EfY_SnFAM6K2XwZd0CpWMcRg-T7k00/edit#gid=0).
