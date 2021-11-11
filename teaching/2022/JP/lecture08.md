@@ -1,7 +1,7 @@
 ---
 layout: default
 courses: JP
-title: 8. Práce se souborovým systémem (WIP)
+title: 8. Práce se souborovým systémem
 alert: Pozor, při práci se soubory může dojít k nechtěnému poškození uložených dat. Ověřujte jaké zdrojové kódy na svém PC spouštíte.
 year: 2022
 ---
