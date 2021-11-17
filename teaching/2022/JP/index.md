@@ -37,7 +37,7 @@ Obsah následujících stránek je pouze doprovodný materiál, nenahrazuje úč
 #### Průběžné úkoly
 Úkoly budou zadávány na platformě [Gihub Classroom](https://classroom.github.com/). Pro plnění úkolů je nutné vytvořit bezplatný účet na [Github.com](https://github.com) a nainstalovat klienta [GitHub Desktop](https://desktop.github.com). Demonstrace systému proběhne na prvním semináři ([Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)).
 
-Na každém semináři bude zadáno několik úkolů. Úkoly je nutné odevzdat vždy do dalšího semináře. Pokud bude řešení nevyhovující, termín splnění se posune o další týden. Pokud ani do té doby student neodevzdá správné řešení tak úkol nebude uznán. Za celý předmět je možné nesplnit až 8 úkolů.
+Na každém semináři bude zadáno několik úkolů. Úkoly je nutné odevzdat vždy do dalšího semináře. Pokud bude řešení nevyhovující, termín splnění se posune o další týden. Pokud ani do té doby student neodevzdá správné řešení tak úkol nebude uznán. Za celý předmět je možné nesplnit až 8 úkolů (jedinou vyjimkou je balíček `data`, ten musí být odevzdán a uznán v poslední verzi).
 
 <img src="/assets/images/JP/schema.png" style="width:100%" srcset="/assets/images/JP/schema@2x.png 2x" />
 
@@ -55,9 +55,6 @@ Před obdržením zpětné vazby je nutné splnit veškeré automatizované test
 Veškeré odevzdané zdrojové kódy jsou automaticky testované na plagiátorství systémem [Moss](https://theory.stanford.edu/~aiken/moss/). Při prokázaném plagiátorství ztrácí oba studenti/studentky nárok na získání zápočtu a situaci dále řeší vedoucí katedry.
 
 **Přehled uznaných úkolů** je dostupný [zde](https://docs.google.com/spreadsheets/d/1rZd0ZoGgrTo0mTOgyKq3NEuUA9DbEpZfUpugs4dGEDU/edit?usp=sharing).
-
-#### Závěrečný projekt
-Na závěr předmětu je nutné vypracovat závěrečný projekt, detailní informace budou dodány během semestru.
 
 ### Soubor `.gitignore` pro Python 3
 Při práci na úkolech bude vytvářeno velké množství souborů, které nechcete odesílat k odevzdání. Základní sadu souborů můžete jednoduše ignorovat umístěním speciálního souboru `.gitignore` do hlavní složky s úkolem. Obsah ukázkového `.gitignore` souboru naleznete [zde](https://github.com/github/gitignore/blob/master/Python.gitignore).
