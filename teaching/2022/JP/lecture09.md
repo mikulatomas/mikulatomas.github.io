@@ -152,3 +152,11 @@ print(timeit.timeit("[x * x for x in range(100000)]", number=10000))
 # 63.06499578600051
 {% endhighlight %}
 
+## Úkoly
+Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2022/JP/classroom)".
+
+* **L09E01**: Matrix rows even numbers [[Náhled](https://github.com/kmi-jp/template-L09E01)], [[Příjmout úkol](https://classroom.github.com/a/4d3tMxH3)]
+* **L09E02**: Password generator [[Náhled](https://github.com/kmi-jp/template-L09E02)], [[Příjmout úkol](https://classroom.github.com/a/gLXlBWOk)]
+
+
+
