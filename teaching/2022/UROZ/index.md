@@ -10,6 +10,8 @@ year: 2022
 
 Kurz je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu rozhraní softwarových aplikací. Posluchač získá znalosti a dovednosti potřebné pro tvorbu kvalitních a použitelných uživatelských rozhraní. Kurz seznamuje s obecnými i konkrétními principy fungování a návrhu grafických, ale i jiných rozhraní.
 
+<img src="/assets/images/URO/intro.png" style="width:100%"/>
+
 ### Témata kurzu:
 1.	Historie a budoucnost uživatelského rozhraní. 
 2.	Základy designu a kognitivní psychologie. 
