@@ -41,4 +41,6 @@ Kurz je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 * [Hack design](https://hackdesign.org)
 * [Kerning game](https://type.method.ac)
 * [Printable wireframe layouts](https://sneakpeekit.com)
+* [Game accessibility guidelines](https://gameaccessibilityguidelines.com)
+* [First Principles of Interaction Design](https://asktog.com/atc/principles-of-interaction-design/)
 
