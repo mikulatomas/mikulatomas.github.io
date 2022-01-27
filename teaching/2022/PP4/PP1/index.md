@@ -1,6 +1,6 @@
 ---
 layout: default
-title: KMI/PP1 Paradigmata programování 4
+title: KMI/PP4 Paradigmata programování 4
 lector: Mgr. Jan Laštovička, Ph.D.
 course_page: https://www.inf.upol.cz/lide/jan-lastovicka/vyuka
 types: [course, summer]
