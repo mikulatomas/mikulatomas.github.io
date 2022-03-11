@@ -15,3 +15,4 @@ V případě, že v materiálech naleznete chybu, kontaktujte mě prosím na e-m
 * **6.2.2020** - Přidány kapitoly "Grafické uživatelské rozhraní" a "Elementy grafického uživatelského rozhraní". Korektura prvních dvou kapitol.
 * **14.1.2022** - Dokončena kapitola "Elementy grafického uživatelského rozhraní", korektura celého textu.
 * **7.2.2022** - Korektura textu.
+* **10.3.2022** - Korektura textu.
