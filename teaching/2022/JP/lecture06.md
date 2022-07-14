@@ -340,7 +340,7 @@ __index__ # chování převodu na integer například při slicingu
 __len__ # chování len()
 __getitem__ # chování x[20]
 __setitem__ # chování x[20] = 2
-__delitem__ # chování del
+__delitem__ # chování del x[20]
 __contains__ # chování in
 {% endhighlight %}
 

@@ -13,6 +13,7 @@ Více informací [zde](https://docs.python.org/3/tutorial/introduction.html#list
 {% highlight python linenos %}
 numbers = [10, 20, 5, 10]
 point = ["Point 1", 10, 20]
+zeros = [0] * 10
 {% endhighlight %}
 
 <div class="pep">
