@@ -63,7 +63,7 @@ subtract(3, b=2)
 # chyba, nejprve musí být povinné parametry
 subtract(b=2, 3)
 # již správně
-subtract(3, a=2)
+subtract(3, b=2)
 {% endhighlight %}
 
 Výchozí parametr.
