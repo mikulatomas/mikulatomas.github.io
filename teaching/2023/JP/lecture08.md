@@ -432,6 +432,6 @@ Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/20
 
 ### Skupina Petržela
 
-* **L08E01**: CSV sum script [[Náhled](https://github.com/kmi-jp/template-L08E01)], [[Příjmout úkol]()]
-* **L08E02**: Data 4 [[Náhled](https://github.com/kmi-jp/template-L08E02)], [[Příjmout úkol]()]
-* **L08E03**: Exercise points analysis [[Náhled](https://github.com/kmi-jp/template-L08E03)], [[Příjmout úkol]()]
+* **L08E01**: CSV sum script [[Náhled](https://github.com/kmi-jp/template-L08E01)], [[Příjmout úkol](https://classroom.github.com/a/pm-bqFCB)]
+* **L08E02**: Data 4 [[Náhled](https://github.com/kmi-jp/template-L08E02)], [[Příjmout úkol](https://classroom.github.com/a/Q2m3SgES)]
+* **L08E03**: Exercise points analysis [[Náhled](https://github.com/kmi-jp/template-L08E03)], [[Příjmout úkol](https://classroom.github.com/a/yoqFAKKu)]

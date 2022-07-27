@@ -545,5 +545,5 @@ Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/20
 
 ### Skupina Petržela
 
-* **L07E01**: Generator function [[Náhled](https://github.com/kmi-jp/template-L07E01)], [[Příjmout úkol]()]
-* **L07E02**: Data 3 [[Náhled](https://github.com/kmi-jp/template-L07E02)], [[Příjmout úkol]()]
+* **L07E01**: Generator function [[Náhled](https://github.com/kmi-jp/template-L07E01)], [[Příjmout úkol](https://classroom.github.com/a/B_W0lA4o)]
+* **L07E02**: Data 3 [[Náhled](https://github.com/kmi-jp/template-L07E02)], [[Příjmout úkol](https://classroom.github.com/a/VvwYThbz)]

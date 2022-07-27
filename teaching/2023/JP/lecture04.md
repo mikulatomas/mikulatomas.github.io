@@ -451,7 +451,6 @@ Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/20
 
 ### Skupina Petržela
 
-* **L04E01**: Matrix multiplication (exceptions) [[Náhled](https://github.com/kmi-jp/template-L04E01)], [[Příjmout úkol]()]
-* **L04E02**: Delay decorator [[Náhled](https://github.com/kmi-jp/template-L04E02)], [[Příjmout úkol]()]
-* **L04E03**: Debug decorator [[Náhled](https://github.com/kmi-jp/template-L04E03)], [[Příjmout úkol]()]
-
+* **L04E01**: Matrix multiplication (exceptions) [[Náhled](https://github.com/kmi-jp/template-L04E01)], [[Příjmout úkol](https://classroom.github.com/a/_U55zAcF)]
+* **L04E02**: Delay decorator [[Náhled](https://github.com/kmi-jp/template-L04E02)], [[Příjmout úkol](https://classroom.github.com/a/lhMHAc7_)]
+* **L04E03**: Debug decorator [[Náhled](https://github.com/kmi-jp/template-L04E03)], [[Příjmout úkol](https://classroom.github.com/a/HDgqiY3a)]]
