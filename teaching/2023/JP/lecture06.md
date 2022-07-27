@@ -681,6 +681,5 @@ Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/20
 
 ### Skupina Petržela
 
-* **L06E01**: Credit Account [[Náhled](https://github.com/kmi-jp/template-L06E01)], [[Příjmout úkol]()]
-* **L06E02**: Data 2 [[Náhled](https://github.com/kmi-jp/template-L06E02)], [[Příjmout úkol]()]
-
+* **L06E01**: Credit Account [[Náhled](https://github.com/kmi-jp/template-L06E01)], [[Příjmout úkol](https://classroom.github.com/a/a8Z-e-YK)]
+* **L06E02**: Data 2 [[Náhled](https://github.com/kmi-jp/template-L06E02)], [[Příjmout úkol](https://classroom.github.com/a/meRtp6Yc)]

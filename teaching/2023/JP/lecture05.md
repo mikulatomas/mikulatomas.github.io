@@ -405,5 +405,5 @@ Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/20
 
 ### Skupina Petržela
 
-* **L05E01**: Read points (NamedTuple) [[Náhled](https://github.com/kmi-jp/template-L05E01)], [[Příjmout úkol]()]
-* **L05E02**: Data [[Náhled](https://github.com/kmi-jp/template-L05E02)], [[Příjmout úkol]()]
+* **L05E01**: Read points (NamedTuple) [[Náhled](https://github.com/kmi-jp/template-L05E01)], [[Příjmout úkol](https://classroom.github.com/a/tq1RTH8s)]
+* **L05E02**: Data [[Náhled](https://github.com/kmi-jp/template-L05E02)], [[Příjmout úkol](https://classroom.github.com/a/aYZMLw9s)]
