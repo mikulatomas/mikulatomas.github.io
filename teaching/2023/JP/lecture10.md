@@ -495,4 +495,4 @@ Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/20
 
 ### Skupina Petržela
 
-* **L10E01**: TicTacToe [[Náhled](https://github.com/kmi-jp/template-L10E01)], [[Příjmout úkol]()]
+* **L10E01**: TicTacToe [[Náhled](https://github.com/kmi-jp/template-L10E01)], [[Příjmout úkol](https://classroom.github.com/a/QLIj7DRM)]

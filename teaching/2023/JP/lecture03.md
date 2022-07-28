@@ -585,6 +585,5 @@ Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/20
 
 ### Skupina Petržela
 
-* **L03E01**: Read points [[Náhled](https://github.com/kmi-jp/template-L03E01)], [[Příjmout úkol]()]
-* **L03E02**: Algebra package [[Náhled](https://github.com/kmi-jp/template-L03E02)], [[Příjmout úkol]()]
-
+* **L03E01**: Read points [[Náhled](https://github.com/kmi-jp/template-L03E01)], [[Příjmout úkol](https://classroom.github.com/a/TgKBreg-)]
+* **L03E02**: Algebra package [[Náhled](https://github.com/kmi-jp/template-L03E02)], [[Příjmout úkol](https://classroom.github.com/a/k3DqliWR)]

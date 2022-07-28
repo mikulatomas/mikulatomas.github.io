@@ -168,7 +168,5 @@ Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/20
 
 ### Skupina Petržela
 
-* **L09E01**: Matrix rows mask [[Náhled](https://github.com/kmi-jp/template-L09E01)], [[Příjmout úkol]()]
-* **L09E02**: Password generator [[Náhled](https://github.com/kmi-jp/template-L09E02)], [[Příjmout úkol]()]
-
-
+* **L09E01**: Matrix rows even numbers [[Náhled](https://github.com/kmi-jp/template-L09E01)], [[Příjmout úkol](https://classroom.github.com/a/Gw5iocCg)]
+* **L09E02**: Password generator [[Náhled](https://github.com/kmi-jp/template-L09E02)], [[Příjmout úkol](https://classroom.github.com/a/xNTRn-ds)]

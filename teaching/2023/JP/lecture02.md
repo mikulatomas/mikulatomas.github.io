@@ -493,8 +493,7 @@ Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/20
 
 ### Skupina Petržela
 
-* **L02E01**: Points input [[Náhled](https://github.com/kmi-jp/template-L02E01)], [[Příjmout úkol]()]
-* **L02E02**: Matrix print [[Náhled](https://github.com/kmi-jp/template-L02E02)], [[Příjmout úkol]()]
-* **L02E03**: Matrix max value [[Náhled](https://github.com/kmi-jp/template-L02E03)], [[Příjmout úkol]()]
-* **L02E04PEP**: PEP8 format [[Náhled](https://github.com/kmi-jp/template-L02E04PEP)], [[Příjmout úkol]()]
-
+* **L02E01**: Points input [[Náhled](https://github.com/kmi-jp/template-L02E01)], [[Příjmout úkol](https://classroom.github.com/a/8A6MKDTg)]
+* **L02E02**: Matrix print [[Náhled](https://github.com/kmi-jp/template-L02E02)], [[Příjmout úkol](https://classroom.github.com/a/srvdcfbo)]
+* **L02E03**: Matrix max value [[Náhled](https://github.com/kmi-jp/template-L02E03)], [[Příjmout úkol](https://classroom.github.com/a/0lLMOjDJ)]
+* **L02E04PEP**: PEP8 format [[Náhled](https://github.com/kmi-jp/template-L02E04PEP)], [[Příjmout úkol](https://classroom.github.com/a/TCCBdRew)]
