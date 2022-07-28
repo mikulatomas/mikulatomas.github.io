@@ -64,7 +64,7 @@ Veškeré odevzdané zdrojové kódy jsou automaticky testované na plagiátorst
 
 **Přehled uznaných úkolů**
 
-* Skupina Mikula [zde](https://docs.google.com/spreadsheets/d/1rZd0ZoGgrTo0mTOgyKq3NEuUA9DbEpZfUpugs4dGEDU/edit?usp=sharing).
+* Skupina Mikula [zde](grades/2022-mikula-grades.html).
 * Skupina Petržela [zde]().
 
 ### Soubor `.gitignore` pro Python 3
