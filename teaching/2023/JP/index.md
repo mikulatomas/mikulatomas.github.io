@@ -27,7 +27,7 @@ Obsah následujících stránek je pouze doprovodný materiál, nenahrazuje úč
 1. Vlastní počítač (volitelně, na učebně budou připravené počítače, není jich však dostatek pro všechny studenty).
 2. Nainstalovaný jazyk Python 3.10+ [ke stažení zde](https://www.python.org/downloads/).
 2. Účet na [Github.com](https://github.com).
-3. Stažený a nainstalovaný git klient [GitHub Desktop](https://desktop.github.com).
+3. Stažený a nainstalovaný git klient (například) [GitHub Desktop](https://desktop.github.com).
 4. Stažené a nainstalované vývojářské studio [Visual Studio Code](https://code.visualstudio.com) (volitelně).
 5. Osobní číslo studenta ze systému STAG (např. R180055).
 
