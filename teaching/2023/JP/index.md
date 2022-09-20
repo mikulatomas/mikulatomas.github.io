@@ -10,6 +10,8 @@ year: 2023
 
 Cílem předmětu je seznámit studenty s programováním v jazyce Python, který patří mezi nejpopulárnější programovací jazyky současnosti. Předpokládá se pokročilejší znalost procedurálního programování (znalost jazyka Python není vyžadována) a algoritmizace. Při výuce je kladen důraz na efektivní a praktické použití jazyka Python. 
 
+<img src="/assets/images/JP/python.png" style="width:100%" />
+
 ### Seznam seminářů
 Obsah následujících stránek je pouze doprovodný materiál, nenahrazuje účast na semináři.
 <ul>
