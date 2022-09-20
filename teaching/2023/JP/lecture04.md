@@ -443,6 +443,8 @@ waste_some_time(100)
 ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2023/JP/classroom)".
 
+*Při řešení úloh nepoužívejte pokročilejší funkcionalitu jazyka která nebyla ještě představena! Takové úkoly budou vráceny na přepracování bez ohledu na jejich funkčnost.*
+
 ### Skupina Mikula
 
 * **L04E01**: Matrix multiplication (exceptions) [[Náhled](https://github.com/kmi-jp/template-L04E01)], [[Příjmout úkol](https://classroom.github.com/a/DhxrDWMt)]

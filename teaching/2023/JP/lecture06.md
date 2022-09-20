@@ -674,6 +674,8 @@ class MyClass:
 ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2023/JP/classroom)".
 
+*Při řešení úloh nepoužívejte pokročilejší funkcionalitu jazyka která nebyla ještě představena! Takové úkoly budou vráceny na přepracování bez ohledu na jejich funkčnost.*
+
 ### Skupina Mikula
 
 * **L06E01**: Credit Account [[Náhled](https://github.com/kmi-jp/template-L06E01)], [[Příjmout úkol](https://classroom.github.com/a/1tQRbNPi)]

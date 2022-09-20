@@ -398,6 +398,8 @@ owner.name = "Pepa Novak"
 ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2023/JP/classroom)".
 
+*Při řešení úloh nepoužívejte pokročilejší funkcionalitu jazyka která nebyla ještě představena! Takové úkoly budou vráceny na přepracování bez ohledu na jejich funkčnost.*
+
 ### Skupina Mikula
 
 * **L05E01**: Read points (NamedTuple) [[Náhled](https://github.com/kmi-jp/template-L05E01)], [[Příjmout úkol](https://classroom.github.com/a/vvJwnP80)]

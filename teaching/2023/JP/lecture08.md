@@ -424,6 +424,8 @@ assert data == input_data
 ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2023/JP/classroom)".
 
+*Při řešení úloh nepoužívejte pokročilejší funkcionalitu jazyka která nebyla ještě představena! Takové úkoly budou vráceny na přepracování bez ohledu na jejich funkčnost.*
+
 ### Skupina Mikula
 
 * **L08E01**: CSV sum script [[Náhled](https://github.com/kmi-jp/template-L08E01)], [[Příjmout úkol](https://classroom.github.com/a/3d_4XLTx)]

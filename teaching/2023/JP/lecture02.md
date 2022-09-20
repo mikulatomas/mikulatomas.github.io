@@ -484,6 +484,8 @@ if not 10 in numbers:
 ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2023/JP/classroom)".
 
+*Při řešení úloh nepoužívejte pokročilejší funkcionalitu jazyka která nebyla ještě představena! Takové úkoly budou vráceny na přepracování bez ohledu na jejich funkčnost.*
+
 ### Skupina Mikula
 
 * **L02E01**: Points input [[Náhled](https://github.com/kmi-jp/template-L02E01)], [[Příjmout úkol](https://classroom.github.com/a/9yqEUfdg)]

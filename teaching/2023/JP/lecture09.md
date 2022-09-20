@@ -161,6 +161,8 @@ print(timeit.timeit("[x * x for x in range(100000)]", number=10000))
 ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2023/JP/classroom)".
 
+*Při řešení úloh nepoužívejte pokročilejší funkcionalitu jazyka která nebyla ještě představena! Takové úkoly budou vráceny na přepracování bez ohledu na jejich funkčnost.*
+
 ### Skupina Mikula
 
 * **L09E01**: Matrix rows mask [[Náhled](https://github.com/kmi-jp/template-L09E01)], [[Příjmout úkol](https://classroom.github.com/a/uRtQBH33)]

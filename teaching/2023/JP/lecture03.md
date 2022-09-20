@@ -578,6 +578,8 @@ Zatím není nutné předchozím krokům rozumět, o publikování a instalovan�
 ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2023/JP/classroom)".
 
+*Při řešení úloh nepoužívejte pokročilejší funkcionalitu jazyka která nebyla ještě představena! Takové úkoly budou vráceny na přepracování bez ohledu na jejich funkčnost.*
+
 ### Skupina Mikula
 
 * **L03E01**: Read points [[Náhled](https://github.com/kmi-jp/template-L03E01)], [[Příjmout úkol](https://classroom.github.com/a/zOI3SwC1)]
