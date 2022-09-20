@@ -115,6 +115,4 @@ Každý repozitář s úkolem, který vytvoříte obsahuje v sekci "Pull request
 
 <img src="/assets/images/JP/classroom/24.png" style="width:100%" />
 
-Po obdržení zpětné vazby stačí kód upravit, vytvořit commit a pushnout změny na server. Kód znovu zkontroluji a pokud je vše v pořádku vlákno uzavřu. V tento moment máte úkol uznaný. V případě dalších problému budeme kolečko zpětné vazby (code review) opakovat.
-
-<img src="/assets/images/JP/classroom/25.png" style="width:100%" />
+Po obdržení zpětné vazby stačí kód upravit, vytvořit commit a pushnout změny na server. Kód znovu zkontroluji a pokud je vše v pořádku napíši komentář, že je řešení uznáno. V tento moment máte úkol uznaný. V případě dalších problému budeme kolečko zpětné vazby (code review) opakovat.
