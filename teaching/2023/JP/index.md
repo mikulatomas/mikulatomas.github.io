@@ -67,7 +67,7 @@ Veškeré odevzdané zdrojové kódy jsou automaticky testované na plagiátorst
 **Přehled uznaných úkolů**
 
 * Skupina Mikula [zde](grades/2022-mikula-grades.html).
-* Skupina Petržela [zde]().
+* Skupina Petržela [zde](https://www.thomasparsley.cz/vyuka/2023/kmi/python/uznane-ukoly).
 
 ### Soubor `.gitignore` pro Python 3
 Při práci na úkolech bude vytvářeno velké množství souborů, které není žádoucí odesílat do repozitáře na Githubu. Základní sadu souborů můžete jednoduše ignorovat umístěním speciálního souboru `.gitignore` do hlavní složky s úkolem. Obsah ukázkového `.gitignore` souboru naleznete [zde](https://github.com/github/gitignore/blob/master/Python.gitignore).
