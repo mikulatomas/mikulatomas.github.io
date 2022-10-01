@@ -358,7 +358,7 @@ label[-1] = "2"
 x = 10
 y = 20
 # špatně
-x    = 10
+x=10
 y    = 10
 
 # PEP8 - pojmenování proměnných
