@@ -144,6 +144,16 @@ abs(-42)
 
 <div class="pep">
 {% highlight python linenos %}
+# PEP8 - mezery okolo operátorů
+# správně
+7 + 4
+# špatně
+7+4
+{% endhighlight %}
+</div>
+
+<div class="pep">
+{% highlight python linenos %}
 # PEP8 - mezery okolo závorek
 # správěn
 (7 + 4)
