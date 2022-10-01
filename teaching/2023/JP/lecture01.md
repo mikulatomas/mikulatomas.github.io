@@ -438,6 +438,21 @@ if boolean_value == True:
 {% endhighlight %}
 </div>
 
+<div class="pep">
+{% highlight python linenos %}
+# PEP8 - Neporovnávat číselné hodnoty pokud testujeme na nulu
+number_value = 42
+
+# správně
+if number_value:
+    print("Not equal to zero!")
+
+# špatně
+if number_value != 0:
+    print("Not equal to zero!")
+{% endhighlight %}
+</div>
+
 ## Úkoly
 Nevíte si rady? Přečtěte si "[Jak pracovat s Github Classroom?](/teaching/2023/JP/classroom)".
 
