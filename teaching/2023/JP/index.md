@@ -38,7 +38,7 @@ Obsah následujících stránek je pouze doprovodný materiál, nenahrazuje úč
 #### Průběžné úkoly
 Úkoly budou zadávány na platformě [Gihub Classroom](https://classroom.github.com/). Pro plnění úkolů je nutné vytvořit bezplatný účet na [Github.com](https://github.com) a nainstalovat klienta [GitHub Desktop](https://desktop.github.com). Demonstrace systému proběhne na prvním semináři ([Jak pracovat s Github Classroom?](/teaching/2023/JP/classroom)).
 
-Na každém semináři bude zadáno několik úkolů. Úkoly je nutné odevzdat vždy do dalšího semináře. Pokud bude řešení nevyhovující, termín splnění se posune o další týden. Pokud ani do té doby student neodevzdá správné řešení tak úkol nebude uznán. Za celý předmět je možné nesplnit až 8 úkolů (jedinou vyjimkou je balíček `data`, ten musí být odevzdán a uznán v poslední verzi).
+Na každém semináři bude zadáno několik úkolů. Úkoly je nutné odevzdat vždy do dalšího semináře. Pokud bude řešení nevyhovující, termín splnění se posune o další týden. Pokud ani do té doby student neodevzdá správné řešení tak úkol nebude uznán (poslední možností odevzdání je vždy čtvrtek v 23:59). Za celý předmět je možné nesplnit až 8 úkolů (jedinou vyjimkou je balíček `data`, ten musí být odevzdán a uznán v poslední verzi).
 
 <img src="/assets/images/JP/schema.png" style="width:100%" srcset="/assets/images/JP/schema@2x.png 2x" />
 
