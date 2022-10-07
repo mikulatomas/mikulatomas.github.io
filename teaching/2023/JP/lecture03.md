@@ -43,13 +43,13 @@ def <function_name>([<parameters>]):
 # správně
 def multiply_point(point, by):
     x, y = point
-    return x*by, y*by
+    return x * by, y * by
 
 
 # špatně
 def multiplyPoint(a, b):
     x, y = a
-    return x*b, y*b
+    return x * b, y * b
 {% endhighlight %}
 </div>
 
@@ -178,7 +178,7 @@ Příkaz `return` můžeme v kombinaci se sekvencí `tuple` použít na vrácen�
 def multiply_point(point, by):
     x, y = point
     # konstruktor tuple
-    return x*by, y*by
+    return x * by, y * by
 
 
 multiply_point((10, 5), 2)
@@ -191,7 +191,7 @@ Tuple unpacking je užitečný pro předání seznamu/tuple argumentů.
 
 {% highlight python linenos %}
 def multiply_point(x, y, by):
-    return x*by, y*by
+    return x * by, y * by
 
 
 point = (10, 5)
