@@ -262,7 +262,7 @@ Každá definice funkce může (a měla by) obsahovat takzvaný docstring. Jedn�
 {% highlight python linenos %}
 def subtract(a, b):
     """Subtract b from a."""
-    return a - b
+    return a - b # V případě jednořádkového docstringu zde nevkládáme prázdný řádek.
 
 def subtract(a, b):
     """Subtract b from a.
@@ -274,7 +274,8 @@ def subtract(a, b):
     Returns:
         Result of subtraction.
     """
-    return a - b
+
+    return a - b # V případě víceřádkového docstringu zde vkládáme prázdný řádek.
 
 subtract.__doc__
 help(subtract)

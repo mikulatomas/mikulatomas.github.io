@@ -24,6 +24,7 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
+
         self.owner = owner
         self.balance = initial_credits
     
@@ -69,6 +70,7 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
+
         self.owner = owner
         self.balance = initial_credits
     
@@ -130,6 +132,7 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
+
         self.owner = owner
         self.balance = initial_credits
     
@@ -190,6 +193,7 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
+
         self.owner = owner
         self.balance = initial_credits
     
@@ -268,6 +272,7 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
+
         self.owner = owner
         self.balance = initial_credits
     
@@ -353,6 +358,7 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
+
         self.owner = owner
         self.balance = initial_credits
     
@@ -401,6 +407,7 @@ class CreditAccount:
             other: Target of credit transfer.
             value: Amount of credit to be transfered.
         """
+
         self -= value
         other += value
 {% endhighlight %}
@@ -439,6 +446,7 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
+
         self.owner = owner
         self.balance = initial_credits
 {% endhighlight %}
@@ -467,6 +475,7 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
+
         self.owner = owner
         self.balance = 0
         self.set_balance(initial_credits)
@@ -505,6 +514,7 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
+
         self.owner = owner
         self._balance = 0
         self.balance = initial_credits
@@ -558,6 +568,7 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
+
         self.owner = owner
         self.balance = initial_credits
     
@@ -592,6 +603,7 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
+
         self.owner = owner
         self.balance = initial_credits
     
@@ -605,6 +617,7 @@ class CreditAccount:
 
         Returns: money value
         """
+        
         return credit * exchange_rate
 {% endhighlight %}
 

@@ -292,7 +292,7 @@ Elegantním způsobem pro testování jednoduchých funkcí je docstring. Knihov
 {% highlight python linenos %}
 def sum_two_numbers(a, b):
    """Sums two numbers.
- 
+
    Args:
        a: first number
        b: second number
@@ -303,6 +303,7 @@ def sum_two_numbers(a, b):
        >>> sum_two_numbers(-10, 20)
        10
    """
+
    return a + b
 {% endhighlight %}
  
@@ -365,6 +366,7 @@ def sum_two_numbers(a: int, b: int) -> int:
    Returns:
        int: Summation of a and b
    """
+
    return a + b
 {% endhighlight %}
  
@@ -385,6 +387,7 @@ def sum_two_numbers(a: Number, b: Number) -> Number:
    Returns:
        Number: Summation of a and b
    """
+
    return a + b
 {% endhighlight %}
  
@@ -406,6 +409,7 @@ def sum_two_numbers(
    Returns:
        typing.Union[int, float]: Summation of a and b
    """
+
    return a + b
 {% endhighlight %}
  
@@ -433,6 +437,7 @@ def dot_product(
    Returns:
        typing.Union[int, float]: Dot product of vector 1 and vector 2
    """
+   
    return sum((a * b for a, b in zip(vector_1, vector_2)))
 {% endhighlight %}
  
@@ -476,6 +481,7 @@ def submatrix(
        typing.Sequence[typing.Sequence[typing.Union[int, float]]]:
            resulting matrix
    """
+
    new_matrix = []
  
    ...

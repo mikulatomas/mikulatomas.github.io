@@ -262,6 +262,7 @@ def multiply_list(list_, by):
     Returns:
         multiplied list
     """
+
     result = []
 
     for item in list_:
@@ -324,6 +325,7 @@ def multiply_list(list_, by):
     Returns:
         multiplied list
     """
+    
     result = []
 
     for item in list_:
