@@ -320,7 +320,6 @@ Vlastní modul pak můžeme vytvořit jednoduše. Vytvořme soubor `list_operati
 {% highlight python linenos %}
 def subtract_lists(list1, list2):
     """Subtract two list piecewise."""
-
     result = []
 
     for a, b in zip(list1, list2):
@@ -331,7 +330,6 @@ def subtract_lists(list1, list2):
 
 def sum_lists(list1, list2):
     """Sum two list piecewise."""
-    
     result = []
 
     for a, b in zip(list1, list2):
@@ -445,8 +443,7 @@ from . import calculator # lokální modul, prázdný řádek
 
 # prazdný řádek nad prvním řádkem pod importy
 def subtract_lists(list1, list2):
-    """Subtract two list piecewise.""" # pod docstring umisťujeme jeden prázdný řádek
-
+    """Subtract two list piecewise.""" # pod docstring neumisťujeme žádný řádek
     result = [] # zde budeme agregovat vysledek, prazdny řádek
 
     for a, b in zip(list1, list2):
@@ -458,7 +455,6 @@ def subtract_lists(list1, list2):
 # dva prazdné řádky mezi funkcemi
 def sum_lists(list1, list2):
     """Sum two list piecewise."""
-    
     result = []
 
     for a, b in zip(list1, list2):

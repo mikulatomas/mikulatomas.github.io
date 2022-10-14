@@ -407,6 +407,7 @@ Pro vytvoření iterátoru je tedy nutné implementovat dunder metody `__iter__`
 {% highlight python linenos %}
 class Sentence:
     """Represents one sentence."""
+
     def __init__(self, text):
         self.text = text
         self.words = text.split(' ')
@@ -450,6 +451,7 @@ Další možností je situaci implementovat jako generátor. Tady pouze upozorn�
 {% highlight python linenos %}
 class Sentence:
     """Represents one sentence."""
+
     def __init__(self, text):
         self.text = text
         self.words = text.split(' ')
@@ -499,6 +501,7 @@ def split_generator(text, sep=[" "]):
 
 class Sentence:
     """Represents one sentence."""
+    
     def __init__(self, text):
         self.text = text
     

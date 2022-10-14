@@ -60,7 +60,6 @@ Výjimky můžeme nejen ošetřovat ale rovněž vyvolávat. V následujícím p
 {% highlight python linenos %}
 def subtract_lists(list1, list2):
     """Subtract two list piecewise."""
-
     if len(list1) != len(list2):
         raise ValueError(f"Lists are not same length, {len(list1)} and {len(list2)} was given.")
     

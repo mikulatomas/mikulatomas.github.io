@@ -24,7 +24,6 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
-
         self.owner = owner
         self.balance = initial_credits
     
@@ -70,7 +69,6 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
-
         self.owner = owner
         self.balance = initial_credits
     
@@ -132,7 +130,6 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
-
         self.owner = owner
         self.balance = initial_credits
     
@@ -193,7 +190,6 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
-
         self.owner = owner
         self.balance = initial_credits
     
@@ -272,7 +268,6 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
-
         self.owner = owner
         self.balance = initial_credits
     
@@ -358,7 +353,6 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
-
         self.owner = owner
         self.balance = initial_credits
     
@@ -445,7 +439,6 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
-
         self.owner = owner
         self.balance = initial_credits
 {% endhighlight %}
@@ -474,7 +467,6 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
-
         self.owner = owner
         self.balance = 0
         self.set_balance(initial_credits)
@@ -513,7 +505,6 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
-
         self.owner = owner
         self._balance = 0
         self.balance = initial_credits
@@ -525,7 +516,6 @@ class CreditAccount:
     @balance.setter
     def balance(self, new_balance):
         """Sets new value of balance, new value cannot be negative."""
-
         if new_balance < 0:
             raise ValueError("Balance cannot be negative number!")
 
@@ -568,7 +558,6 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
-
         self.owner = owner
         self.balance = initial_credits
     
@@ -603,7 +592,6 @@ class CreditAccount:
             owner: owner of the account
             initial_credits (optional): credit balance. Defaults to 0.
         """
-
         self.owner = owner
         self.balance = initial_credits
     
