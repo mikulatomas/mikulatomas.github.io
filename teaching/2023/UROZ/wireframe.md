@@ -14,6 +14,7 @@ Kolokvium proběhne v zápočtovém týdnu, na kolokviu student krátce okomentu
 
 ### Projekty
 * (PC/Playstation/Xbox) [Herní UI pro jednoduchou FPS hru](game.html).
+* (iOS/Android) [Mobilní aplikace pro ovládání barevných LED pásků](lights.html).
 
 ### Co **musí** obsahovat wireframe?
 * Základní rozmístění a volba elementů

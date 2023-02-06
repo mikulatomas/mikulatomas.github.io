@@ -1,7 +1,7 @@
 ---
 layout: default
 courses: UROZ
-title: Mobilní aplikace pro ovládání barevného LED pásku
+title: Mobilní aplikace pro ovládání barevných LED pásků
 ---
 
 ## {{ page.title }}
