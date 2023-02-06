@@ -14,9 +14,9 @@ Cílem je přepracovat aplikaci pro ovládání barevného LED pásku.
 * nastavení funkci pro každý pásek (režim svícení, stmívání)
 * nastavení časovače pro jednotlivé LED pásky
 
-<img src="/assets/images/URO/lights_1.png" style="width:100%"/>
-<img src="/assets/images/URO/lights_2.png" style="width:100%"/>
-<img src="/assets/images/URO/lights_3.png" style="width:100%"/>
+<img src="/assets/images/URO/lights_1.jpeg" style="width:100%"/>
+<img src="/assets/images/URO/lights_2.jpeg" style="width:100%"/>
+<img src="/assets/images/URO/lights_3.jpeg" style="width:100%"/>
 
 
 
