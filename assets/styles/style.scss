@@ -49,13 +49,13 @@ figure {
 h2, h3 {
     font-weight: bold;
     margin-top: 1.4em;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.9em;
 }
 
-h2 {font-size: 1.5em;}
+h2 {font-size: 1.7em;}
 
-h3 {font-size: 1.2em;
-    margin-bottom: 0.5em;}
+h3 {font-size: 1.4em;
+    margin-bottom: 0.8em;}
 
 h4 {
     font-size: 1.05em;
@@ -373,12 +373,15 @@ hr {
 
 .cv__headline {
     font-weight: bold;
+    font-size: 1.0em;
+    padding-bottom: 0em;
 }
 
 .cv__info {
     font-size: 0.9em;
     color: #8D8D8D;
     margin-top: 0.2em;
+    margin-bottom: 0.9em;
     a {
         color: #8D8D8D;
     }
@@ -387,6 +390,14 @@ hr {
         padding-left: 0.8em;
         color: #B3B3B3;
     }
+}
+
+.cv__subheadline {
+    margin-bottom: 0.9em;
+}
+
+.cv__project {
+    font-style: italic;
 }
 
 .cv__info ~ .cv__info {

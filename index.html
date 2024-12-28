@@ -2,18 +2,9 @@
 layout: default
 ---
 <div class="container--flex bio">
-    <img class="rounded not-on-small shadow" srcset="
-          {{ '/assets/images/portrait.jpg' | prepend: full_base_url }}, 
-          {{ '/assets/images/portrait@2x.jpg' | prepend: full_base_url }} 2x" width="161" height="231" alt="portrait">
     <div>
         <h2 style="display: none;">Bio</h2>
-        <p>I am PhD student of Computer Science at Palacký University. My specialization is <strong>Cognitive
-                psychology</strong> in
-            context
-            of
-            <strong>Data science</strong> and <strong>Formal Concept Analysis</strong>. I also love Python programming
-            and
-            design of any kind.
+        <p>I strive to create the best possible experience for the players, which initiates within the core designs of the game and goes beyond the UI design.
         </p>
 
         <table class="contacts" border="0" cellspacing="0" cellpadding="0">
@@ -23,20 +14,16 @@ layout: default
                     <td><a href="mailto:{{ site.email }}">{{ site.email | escape }}</a></td>
                 </tr>
                 <tr>
-                    <td>ORCID:</td>
-                    <td><a href="https://orcid.org/0000-0002-7514-8523">0000-0002-7514-8523</a></td>
+                    <td>Portfolio:</td>
+                    <td><a href="https://www.behance.net/tomasmikula">Behance.net</a></td>
                 </tr>
                 <tr>
-                    <td>Google Scholar:</td>
-                    <td><a href="https://scholar.google.cz/citations?user=bWjI-lUAAAAJ&hl=en">Tomas Mikula</a></td>
+                    <td>Publications:</td>
+                    <td><a href="https://scholar.google.cz/citations?user=bWjI-lUAAAAJ&hl=en">Google Scholar</a></td>
                 </tr>
                 <tr>
-                    <td>Twitter:</td>
-                    <td><a href="https://twitter.com/tomasmikulacz">@tomasmikulacz</a></td>
-                </tr>
-                <tr>
-                    <td>Office:</td>
-                    <td>{{ site.office }} ({{ site.office-hours }})</td>
+                    <td>Github:</td>
+                    <td><a href="https://github.com/mikulatomas">Github.com</a></td>
                 </tr>
             </tbody>
         </table>
@@ -44,7 +31,7 @@ layout: default
 </div>
 
 <hr>
-
+<!--
 <h3>Publications</h3>
 <div class="cv cv--publication">
     <span class="cv__headline">Typicality: A formal concept analysis account.</span>
@@ -84,17 +71,19 @@ layout: default
             href="https://github.com/xflr6/concepts">GitHub</a> <i class="fab fa-python"></i><a
             href="https://pypi.org/project/concepts/">PyPi</a></span>
 </div>
-
-
+-->
+<!--
 <h3>Projects</h3>
-<!-- <div class="cv cv--project">
+ <div class="cv cv--project">
     <span class="cv__headline">Starcraft II AI Cup</span>
     <span class="cv__subheadline">Organizer of the competition in cooperation with <a
             href="https://apollo.inf.upol.cz/~balun/">Jiří Balun</a>.</span>
     <span class="cv__info">2020 – N/A <i class="far fa-link"></i><a href="https://www.inf.upol.cz/sc2-ai-cup/">Web of
             the competition</a></span>
-</div> -->
+</div>
+-->
 
+<!--
 <div class="cv cv--project">
     <span class="cv__headline">UPlikace iOS/Android</span>
     <span class="cv__subheadline">Design of iOS/Android application for Palacký University in cooperation with <a
@@ -103,6 +92,7 @@ layout: default
         href="https://apps.apple.com/cz/app/uplikace/id1386643214">AppStore</a> <i class="fab fa-google-play"></i><a
             href="https://play.google.com/store/apps/details?id=cz.uplikace.app&hl=cs">GooglePlay</a></span>
 </div>
+-->
 
 <!-- <div class="cv cv--project">
     <span class="cv__headline">UPlikace iOS</span>
@@ -112,6 +102,7 @@ layout: default
             href="https://apps.apple.com/cz/app/uplikace/id1386643214">AppStore</a></span>
 </div> -->
 
+<!--
 <div class="cv cv--project">
     <span class="cv__headline">UPOL Search Engine</span>
     <span class="cv__subheadline">Master theses — Search engine for upol.cz domain.</span>
@@ -119,6 +110,7 @@ layout: default
     <span class="cv__info">2016 – 2018 <i class="fab fa-github"></i><a
             href="https://github.com/UPOLSearch/UPOL-Search-Engine">GitHub</a></span>
 </div>
+-->
 
 <!-- <div class="cv cv--project">
     <span class="cv__headline">Stocksy Photographer</span>
@@ -127,22 +119,56 @@ layout: default
             href="https://www.stocksy.com/tomasmikula">Stocksy.com</a></span>
 </div> -->
 
+<h3>Experiences</h3>
+<div class="cv cv--publication">
+    <span class="cv__headline">INGAME STUDIOS, a.s.</span>
+    <span class="cv__subheadline">UX/UI Designer</span>
+    <span class="cv__project">Crime Boss: Rockay City (PC/PS5/XSX/XSS)</span>
+    <span class="cv__info">2023 – Present <i class="far fa-link"></i><a
+        href="https://www.behance.net/gallery/200296463/Crime-Boss-Rockay-City-(MP-UX)">Crime Boss: Rockay City</a></span>
+</div>
+
+<div class="cv cv--publication">
+    <span class="cv__headline">Palacký University</span>
+    <span class="cv__subheadline">PhD Teaching Fellow</span>
+
+    <span class="cv__project">Python</span>
+    <span class="cv__info">2021 – 2023 <i class="far fa-link"></i><a
+        href="teaching/2023/JP/">Lecture materials (cs)</a></span>
+
+    <span class="cv__project">User Interfaces</span>
+    <span class="cv__info">2018 – 2023 <i class="far fas fa-file-pdf"></i><a
+        href="/assets/files/uzivatelska-rozhrani.pdf">Lecture materials (cs)</a></span>
+</div>
+
+<div class="cv cv--publication">
+    <span class="cv__headline">beecode.io</span>
+    <span class="cv__subheadline">UX/UI Designer</span>
+    <span class="cv__project">External consulations</span>
+    <span class="cv__info">2019 – 2023 <i class="far fa-link"></i><a
+        href="https://www.behance.net/gallery/160321631/Unizone">Unizone</a></span>
+    <!-- <span class="cv__subheadline">UX/UI Designer</span> -->
+    <span class="cv__project">Unizone iOS</span>
+    <span class="cv__info">2018 – 2019 <i class="fab fa-app-store-ios"></i></i><a
+        href="https://apps.apple.com/cz/app/uplikace/id1386643214">AppStore</a></span>
+    <!-- <span class="cv__subheadline">UX/UI Designer</span> -->
+    <span class="cv__project">Unizone Android</span>
+    <span class="cv__info">2016 – 2018 <i class="fab fa-google-play"></i><a
+        href="https://play.google.com/store/apps/details?id=cz.uplikace.app&hl=cs">GooglePlay</a></span>
+</div>
+
 
 <h3>Education</h3>
 <div class="cv cv--education">
-    <span class="cv__headline">PhD — Computer Science</span>
-    <span class="cv__subheadline">Department of Computer Science, Palacký University Olomouc</span>
-    <span class="cv__info">2018 – N/A</span>
-</div>
+    <span class="cv__headline">Palacký University Olomouc</span>
+    <span class="cv__subheadline">Czech Republic</span>
+    <span class="cv__project">PhD — Computer Science & Cognitive Psychology</span>
+    <span class="cv__info">2018 – 2024 <i class="fas fa-file-pdf"></i><a
+        href="{{ '/assets/files/mikula-typicality-computational-account.pdf' | prepend: full_base_url }}">Typicality: A computational account</a></span>
 
-<div class="cv cv--education">
-    <span class="cv__headline">MSc — Computer Science</span>
-    <span class="cv__subheadline">Department of Computer Science, Palacký University Olomouc</span>
-    <span class="cv__info">2016 – 2018</span>
-</div>
-
-<div class="cv cv--education">
-    <span class="cv__headline">BSc — Computer Science</span>
-    <span class="cv__subheadline">Department of Computer Science, Palacký University Olomouc</span>
+    <span class="cv__project">MSc — Computer Science</span>
+    <span class="cv__info">2016 – 2018 <i class="far fa-link"></i><a
+        href="https://svoc.prf.upol.cz/vysledky/vysledky-2018/">Master thesis - Award winner of Dean of the Falculty of Science UP</a></span>
+    <span class="cv__project">BSc — Computer Science</span>
     <span class="cv__info">2013 – 2016</span>
 </div>
